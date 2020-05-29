@@ -14,30 +14,23 @@ class UserServiceAlamofire: RandomUserServiceProtocol {
     
     private var isFetching = false
     
-    func getUsers(page: Int, results: Int, seed: String, completion: @escaping ([User]?, String?) -> ()) {
+    func getUsers(page: Int, results: Int, seed: String, completion: @escaping (Result<[User], ErrorTypes>) -> ()) {
         guard let url = createUrl(page, results, seed) else {
-            completion(nil, errorTypes.cannotBeReached.rawValue)
+            completion(.failure(.cannotBeReached))
             return
         }
-        if isFetching {
-            return
-        }
-        
-        isFetching = true
         AF.request(url).responseJSON { response in
-            self.isFetching = false
-            
             do {
                 if response.error != nil || response.response?.statusCode == nil {
-                    throw RuntimeError(response.error?.localizedDescription ?? errorTypes.wrongRequest.rawValue)
+                    completion(.failure(.wrongRequest))
                 } else if response.response!.statusCode < 400 {
                     let userResult = try JSONDecoder().decode(UserResult.self, from: response.data!)
-                    completion(userResult.results, nil)
+                    completion(.success(userResult.results))
                 } else {
-                    throw RuntimeError(errorTypes.unexpectedError.rawValue)
+                    completion(.failure(.unexpectedError))
                 }
-            } catch let error {
-                completion(nil, error.localizedDescription)
+            } catch {
+                completion(.failure(.unexpectedError))
             }
         }
     }

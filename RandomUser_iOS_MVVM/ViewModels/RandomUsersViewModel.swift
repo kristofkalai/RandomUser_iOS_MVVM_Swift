@@ -53,15 +53,17 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
         
         showRefreshView = true
         
-        userService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { (users, error) in
+        userService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { result in
             self.showRefreshView = false
-            if let users = users {
-                
+            switch result {
+            case .success(let users):
                 self.clearNilsFromArray()
                 self.users.append(contentsOf: users)
                 self.addNilsToArray()
                 
                 self.objectWillChange.send(self.users)
+            case .failure(_):
+                break
             }
         }
     }

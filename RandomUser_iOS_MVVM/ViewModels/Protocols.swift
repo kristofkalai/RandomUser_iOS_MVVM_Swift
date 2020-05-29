@@ -38,7 +38,7 @@ protocol RandomUserServiceProtocol {
     ///   - results: the number of results in a page.
     ///   - seed: the API use this to give some data. For the same seed, it gives back the same results.
     ///   - completion: will be called after the data is ready in an array, or some error occured. Both parameters in the same time couldn't be `nil`.
-    func getUsers(page: Int, results: Int, seed: String, completion: @escaping ([User]?, String?) -> ())
+    func getUsers(page: Int, results: Int, seed: String, completion: @escaping (Result<[User], ErrorTypes>) -> ())
 }
 
 extension RandomUserServiceProtocol {
