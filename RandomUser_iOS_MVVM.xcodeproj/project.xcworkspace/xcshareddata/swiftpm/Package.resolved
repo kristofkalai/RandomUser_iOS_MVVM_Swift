@@ -11,6 +11,96 @@
         }
       },
       {
+        "package": "FetchImage",
+        "repositoryURL": "https://github.com/kean/FetchImage",
+        "state": {
+          "branch": null,
+          "revision": "b9ea4f9f97a4bc9fde452cea277d25d0a4f8f6df",
+          "version": "0.2.1"
+        }
+      },
+      {
+        "package": "Hero",
+        "repositoryURL": "https://github.com/HeroTransitions/Hero",
+        "state": {
+          "branch": null,
+          "revision": "ae951b89f23485de8a7b95aaa5cead7f78ab1df0",
+          "version": "1.5.0"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": null,
+          "revision": "910d808ade2a576e1a292ceb458a6fa43f67f594",
+          "version": "5.14.0"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "state": {
+          "branch": null,
+          "revision": "4e5877425dae5c10792fc9d22d53dc6bf6824dc1",
+          "version": "3.1.8"
+        }
+      },
+      {
+        "package": "Moya",
+        "repositoryURL": "https://github.com/Moya/Moya",
+        "state": {
+          "branch": null,
+          "revision": "b3e5a233e0d85fd4d69f561c80988590859c7dee",
+          "version": "14.0.0"
+        }
+      },
+      {
+        "package": "Nuke",
+        "repositoryURL": "https://github.com/kean/Nuke.git",
+        "state": {
+          "branch": null,
+          "revision": "1267d1c7cdfb7e3ac7bc654db0e5cfd6a9f18c9e",
+          "version": "9.1.0"
+        }
+      },
+      {
+        "package": "ReactiveSwift",
+        "repositoryURL": "https://github.com/Moya/ReactiveSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "f195d82bb30e412e70446e2b4a77e1b514099e88",
+          "version": "6.1.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa",
+        "state": {
+          "branch": null,
+          "revision": "8cc4d9ea5815f34c39a518261f81a82ca3270b69",
+          "version": "5.0.2"
+        }
+      },
+      {
+        "package": "RealmCore",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "bc900a2a8e05722c1b42f95396adb3c99eeb500f",
+          "version": "6.0.6"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
+          "version": "5.1.1"
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {
@@ -26,6 +116,24 @@
           "branch": null,
           "revision": "1ed96d9b08fa18694621e0b1de182fbf032121bc",
           "version": "1.4.0"
+        }
+      },
+      {
+        "package": "SkeletonUI",
+        "repositoryURL": "https://github.com/CSolanaM/SkeletonUI",
+        "state": {
+          "branch": null,
+          "revision": "66d5cb91c1067a0bbb0afae722252f60ecb10550",
+          "version": "1.0.4"
+        }
+      },
+      {
+        "package": "SnapshotTesting",
+        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing",
+        "state": {
+          "branch": null,
+          "revision": "114882386a815f4a2e6d8f2f7ee4857acd372438",
+          "version": "1.7.2"
         }
       },
       {

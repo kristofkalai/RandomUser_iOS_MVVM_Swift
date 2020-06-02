@@ -31,6 +31,15 @@
 		7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */; };
 		7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */; };
 		7C388DBE248172C8008D5DFF /* WebImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */; };
+		7C7658572486F9F200D781C9 /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7658562486F9F200D781C9 /* DisplayLink.swift */; };
+		7C7658592486FA2B00D781C9 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7658582486FA2B00D781C9 /* View+Extensions.swift */; };
+		7C76585C248711DB00D781C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585B248711DB00D781C9 /* Moya */; };
+		7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585E2487124F00D781C9 /* KingfisherSwiftUI */; };
+		7C7658622487127300D781C9 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7658612487127300D781C9 /* FetchImage */; };
+		7C765865248712C900D781C9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C765864248712C900D781C9 /* RealmSwift */; };
+		7C7658682487134000D781C9 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7658672487134000D781C9 /* Hero */; };
+		7C76586B2487136400D781C9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76586A2487136400D781C9 /* Lottie */; };
+		7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76586D2487140800D781C9 /* SkeletonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +66,8 @@
 		7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebImage+Extensions.swift"; sourceTree = "<group>"; };
+		7C7658562486F9F200D781C9 /* DisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
+		7C7658582486FA2B00D781C9 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +77,14 @@
 			files = (
 				7C388DB52481183B008D5DFF /* SDWebImageSwiftUI in Frameworks */,
 				7C388DB224811797008D5DFF /* SwiftUIPullToRefresh in Frameworks */,
+				7C76586B2487136400D781C9 /* Lottie in Frameworks */,
+				7C7658682487134000D781C9 /* Hero in Frameworks */,
+				7C765865248712C900D781C9 /* RealmSwift in Frameworks */,
+				7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */,
+				7C76585C248711DB00D781C9 /* Moya in Frameworks */,
+				7C7658622487127300D781C9 /* FetchImage in Frameworks */,
 				7C388DA0248110A0008D5DFF /* Alamofire in Frameworks */,
+				7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +138,7 @@
 				7C388DA5248111B3008D5DFF /* RandomUsersView.swift */,
 				7C388DA9248111CF008D5DFF /* RandomUserDetailsView.swift */,
 				7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */,
+				7C7658562486F9F200D781C9 /* DisplayLink.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +189,7 @@
 			children = (
 				7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */,
 				7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */,
+				7C7658582486FA2B00D781C9 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +214,13 @@
 				7C388D9F248110A0008D5DFF /* Alamofire */,
 				7C388DB124811797008D5DFF /* SwiftUIPullToRefresh */,
 				7C388DB42481183B008D5DFF /* SDWebImageSwiftUI */,
+				7C76585B248711DB00D781C9 /* Moya */,
+				7C76585E2487124F00D781C9 /* KingfisherSwiftUI */,
+				7C7658612487127300D781C9 /* FetchImage */,
+				7C765864248712C900D781C9 /* RealmSwift */,
+				7C7658672487134000D781C9 /* Hero */,
+				7C76586A2487136400D781C9 /* Lottie */,
+				7C76586D2487140800D781C9 /* SkeletonUI */,
 			);
 			productName = RandomUser_iOS_MVVM;
 			productReference = 7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */;
@@ -227,6 +254,13 @@
 				7C388D9E248110A0008D5DFF /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7C388DB024811797008D5DFF /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
 				7C388DB32481183B008D5DFF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */,
+				7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7C7658602487127300D781C9 /* XCRemoteSwiftPackageReference "FetchImage" */,
+				7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				7C7658662487134000D781C9 /* XCRemoteSwiftPackageReference "Hero" */,
+				7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 			);
 			productRefGroup = 7C388D6F24810FDA008D5DFF /* Products */;
 			projectDirPath = "";
@@ -266,12 +300,14 @@
 				7C388DA6248111B3008D5DFF /* RandomUsersView.swift in Sources */,
 				7C388DAA248111CF008D5DFF /* RandomUserDetailsView.swift in Sources */,
 				7C388D9824811065008D5DFF /* User.swift in Sources */,
+				7C7658572486F9F200D781C9 /* DisplayLink.swift in Sources */,
 				7C388D9624811065008D5DFF /* ErrorTypes.swift in Sources */,
 				7C388D9924811065008D5DFF /* Name.swift in Sources */,
 				7C388DA2248110EC008D5DFF /* Protocols.swift in Sources */,
 				7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */,
 				7C388D9C24811065008D5DFF /* UserServiceAlamofire.swift in Sources */,
 				7C388D9724811065008D5DFF /* Street.swift in Sources */,
+				7C7658592486FA2B00D781C9 /* View+Extensions.swift in Sources */,
 				7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +530,62 @@
 				minimumVersion = 1.4.0;
 			};
 		};
+		7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+		7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
+		7C7658602487127300D781C9 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/FetchImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+		7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		7C7658662487134000D781C9 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+		7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -511,6 +603,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C388DB32481183B008D5DFF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		7C76585B248711DB00D781C9 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		7C76585E2487124F00D781C9 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		7C7658612487127300D781C9 /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C7658602487127300D781C9 /* XCRemoteSwiftPackageReference "FetchImage" */;
+			productName = FetchImage;
+		};
+		7C765864248712C900D781C9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		7C7658672487134000D781C9 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C7658662487134000D781C9 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
+		};
+		7C76586A2487136400D781C9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		7C76586D2487140800D781C9 /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

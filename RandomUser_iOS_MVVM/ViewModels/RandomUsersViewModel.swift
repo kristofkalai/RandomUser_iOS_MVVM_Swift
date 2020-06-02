@@ -53,7 +53,8 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
         
         showRefreshView = true
         
-        userService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { result in
+        userService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { [weak self] result in
+            guard let self = self else { return }
             self.showRefreshView = false
             switch result {
             case .success(let users):
@@ -73,16 +74,16 @@ extension RandomUsersViewModel {
     
     /// After fetching, the array needs to be cleared from the nilUsers.
     private func clearNilsFromArray() {
-        self.users = self.users.filter({ user -> Bool in
+        users = users.filter { user -> Bool in
             !user.isNilUser
-        })
+        }
     }
     
     /// After fetching and storing, the array needs to be filled with nilUsers.
     /// By default the last 10 elements will be nilUsers.
     private func addNilsToArray(_ nums: Int = 10) {
         for _ in 0 ..< nums {
-            self.users.append(User.nilUser())
+            users.append(User.nilUser())
         }
     }
 }

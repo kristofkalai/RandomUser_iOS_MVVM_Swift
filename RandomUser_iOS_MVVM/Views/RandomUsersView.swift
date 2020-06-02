@@ -11,11 +11,14 @@ import SDWebImageSwiftUI
 import SwiftUIPullToRefresh
 
 /// The first screen.
-class HostingController: UIHostingController<RandomUsersView> {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
-    }
-}
+/// Use this, if you want to override the default statusbar content color.
+/*
+ class HostingController: UIHostingController<RandomUsersView> {
+ override var preferredStatusBarStyle: UIStatusBarStyle {
+ return .whiteContent
+ }
+ }
+ */
 
 /// The content of the first screen.
 struct RandomUsersView: View {
