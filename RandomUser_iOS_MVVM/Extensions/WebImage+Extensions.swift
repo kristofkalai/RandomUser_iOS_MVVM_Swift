@@ -16,6 +16,7 @@ extension WebImage {
         
         return WebImage(url: URL(string: url))
             .resizable()
+            .placeholder(Image(systemName: "photo"))
             .indicator(.activity)
             .animation(.easeInOut(duration: 0.5))
             .transition(.fade)

@@ -9,6 +9,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 import SwiftUIPullToRefresh
+import SkeletonUI
 
 /// The first screen.
 /// Use this, if you want to override the default statusbar content color.

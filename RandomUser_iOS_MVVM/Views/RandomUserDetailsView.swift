@@ -9,6 +9,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 import DisplayLink
+import SkeletonUI
 
 /// The second screen.
 struct RandomUserDetailsView: View {
@@ -19,10 +20,18 @@ struct RandomUserDetailsView: View {
     
     private let animationDuration = 3.5
     @State var animationStartDate = Date()
+    @State var url = ""
     
     var body: some View {
         return VStack() {
-            WebImage.configure(url: user.picture.large)
+            WebImage.configure(url: url)
+                .skeleton(with: url == "", transition: .opacity, animated: .easeInOut)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        self.url = self.user.picture.large
+                    }
+            }.clipShape(Circle())
+            .frame(width: UIScreen.width * 0.8, height: UIScreen.width * 0.8)
             Spacer()
             Text.configure(accessibilitiesString).onFrame { frame in
                 self.onFrameRefresh(text: &self.accessibilitiesString, fullString: self.user.accessibilities)
