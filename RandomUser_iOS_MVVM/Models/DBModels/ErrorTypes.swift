@@ -9,7 +9,6 @@
 import Foundation
 
 enum ErrorTypes: String, Error {
-    
     case wrongRequest = "Wrong request. Please try again later."
     case cannotBeReached = "API cannot be reached. Please try again later."
     case unexpectedError = "Something unexpectedly went wrong. Please inform us via email."

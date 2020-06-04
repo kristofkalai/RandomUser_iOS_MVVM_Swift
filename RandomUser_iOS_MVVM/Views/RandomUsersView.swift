@@ -11,16 +11,6 @@ import SDWebImageSwiftUI
 import SwiftUIPullToRefresh
 import SkeletonUI
 
-/// The first screen.
-/// Use this, if you want to override the default statusbar content color.
-/*
- class HostingController: UIHostingController<RandomUsersView> {
- override var preferredStatusBarStyle: UIStatusBarStyle {
- return .whiteContent
- }
- }
- */
-
 /// The content of the first screen.
 struct RandomUsersView: View {
     
@@ -45,7 +35,7 @@ struct RandomUsersView: View {
     func buildRow(_ user: User) -> AnyView {
         
         /// If the current element is not nilUser, then if contains some real data.
-        if !user.isNilUser {
+        if user.email != "" {
             return AnyView(
                 NavigationLink(destination: RandomUserDetailsView(user: user), label: {
                     VStack {
@@ -60,7 +50,7 @@ struct RandomUsersView: View {
                     }
                 })
             )
-            /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
+        /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
         } else {
             return AnyView(
                 VStack {

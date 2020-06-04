@@ -16,7 +16,7 @@ struct RuntimeError: LocalizedError {
         self.message = message
     }
     
-    public var errorDescription: String? {
+    var errorDescription: String? {
         return message
     }
 }

@@ -28,27 +28,3 @@ protocol RandomUserViewModelProtocol {
     /// Fetch some random users.
     func getRandomUsers(refresh: Bool)
 }
-
-// MARK: - Service needs to implement this.
-protocol RandomUserServiceProtocol {
-    
-    /// Download random users with the given parameters.
-    /// - Parameters:
-    ///   - page: the page that you want to download.
-    ///   - results: the number of results in a page.
-    ///   - seed: the API use this to give some data. For the same seed, it gives back the same results.
-    ///   - completion: will be called after the data is ready in an array, or some error occured. Both parameters in the same time couldn't be `nil`.
-    func getUsers(page: Int, results: Int, seed: String, completion: @escaping (Result<[User], ErrorTypes>) -> ())
-}
-
-extension RandomUserServiceProtocol {
-    
-    /// The API URL (in `String`).
-    /// - Note:
-    /// The number in the `String` indicate the used version of the API.
-    /// With `1.3` it works fine, but maybe a newer version would break the implementation.
-    func getBaseApiUrl() -> String {
-        return "https://randomuser.me/api/1.3/"
-    }
-}
-

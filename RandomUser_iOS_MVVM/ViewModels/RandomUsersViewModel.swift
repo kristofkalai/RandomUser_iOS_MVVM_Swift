@@ -33,10 +33,14 @@ class RandomUsersViewModel: ObservableObject {
     private var nextPage: Int {
         return users.count / numberOfUsersPerPage + 1
     }
-    private let userService: RandomUserServiceProtocol = UserServiceAlamofire()
+    private var apiService: ApiServiceProtocol
+    private var persistenceService: PersistenceServiceProtocol
     
-    init() {
-        getRandomUsers()
+    /// Dependency Injection via Constructor Injection.
+    init(_ apiServiceType: ApiServiceContainer.USType = .alamofire, _ persistenceServiceType: PersistenceServiceContainer.PSType = .realm) {
+        self.apiService = ApiServiceContainer.init(apiServiceType).service
+        self.persistenceService = PersistenceServiceContainer.init(persistenceServiceType).service
+        getCachedUsers()
     }
 }
 
@@ -45,7 +49,9 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
     
     /// Fetch some random users.
     func getRandomUsers(refresh: Bool = false) {
-
+        
+        guard showRefreshView == false else { return }
+        
         if refresh {
             users.removeAll()
             seed = UUID().uuidString
@@ -53,13 +59,16 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
         
         showRefreshView = true
         
-        userService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { [weak self] result in
+        apiService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { [weak self] result in
             guard let self = self else { return }
             self.showRefreshView = false
             switch result {
             case .success(let users):
                 self.clearNilsFromArray()
                 self.users.append(contentsOf: users)
+                if self.users.count > self.numberOfUsersPerPage {
+                    self.persistenceService.deleteAndAdd(UserObject.self, self.users)
+                }
                 self.addNilsToArray()
                 
                 self.objectWillChange.send(self.users)
@@ -72,18 +81,30 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
 
 extension RandomUsersViewModel {
     
-    /// After fetching, the array needs to be cleared from the nilUsers.
+    /// After fetching, the array needs to be cleared from the "nil users".
     private func clearNilsFromArray() {
         users = users.filter { user -> Bool in
-            !user.isNilUser
+            user.email != ""
         }
     }
     
-    /// After fetching and storing, the array needs to be filled with nilUsers.
-    /// By default the last 10 elements will be nilUsers.
+    /// After fetching and storing, the array needs to be filled with "nil users".
+    /// By default the last 10 elements will be "nil users".
     private func addNilsToArray(_ nums: Int = 10) {
         for _ in 0 ..< nums {
-            users.append(User.nilUser())
+            users.append(User())
+        }
+    }
+    
+    private func getCachedUsers() {
+        let users = self.persistenceService.objects(UserObject.self)
+        for user in users {
+            self.users.append(User(managedObject: user))
+        }
+        if self.users.count == 0 {
+            getRandomUsers()
+        } else {
+            addNilsToArray()
         }
     }
 }

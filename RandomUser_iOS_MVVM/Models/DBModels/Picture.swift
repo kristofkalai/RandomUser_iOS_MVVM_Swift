@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct Picture: Codable {
     
@@ -14,4 +15,38 @@ struct Picture: Codable {
     
     let large: String
     let medium: String
+}
+
+final class PictureObject: Object {
+    
+    @objc dynamic var identifier = UUID().uuidString
+    @objc dynamic var large = ""
+    @objc dynamic var medium = ""
+    
+    override static func primaryKey() -> String? {
+        return "identifier"
+    }
+}
+
+extension Picture: Persistable {
+    
+    /// Create the `struct` based on the `Object` from the database.
+    /// If the`Object` is `nil`, it should initialize the struct appropriately.
+    init(managedObject: PictureObject? = nil) {
+        if let managedObject = managedObject {
+            large = managedObject.large
+            medium = managedObject.medium
+        } else {
+            large = ""
+            medium = ""
+        }
+    }
+    
+    /// Create the `Object` that will be stored in the database based on the `struct`.
+    func managedObject() -> PictureObject {
+        let picture = PictureObject()
+        picture.large = large
+        picture.medium = medium
+        return picture
+    }
 }

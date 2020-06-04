@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct User: Codable, Identifiable {
     
     var id = UUID()
-    var isNilUser = false
     
     let name: Name
     let picture: Picture
@@ -39,8 +39,58 @@ struct User: Codable, Identifiable {
     var expandedLocation: String {
         return "Address:\n\t\(location.country), \(location.state), \(location.city)\n\tStreet \(location.street.name) \(location.street.number)"
     }
+}
+
+final class UserObject: Object {
     
-    static func nilUser() -> User {
-        return User(isNilUser: true, name: Name(first: "", last: "", title: ""), picture: Picture(large: "", medium: ""), gender: "", email: "", phone: "", cell: "", location: Location(city: "", country: "", state: "", street: Street(name: "", number: 0)))
+    @objc dynamic var identifier = UUID().uuidString
+    @objc dynamic var name: NameObject? = NameObject()
+    @objc dynamic var picture: PictureObject? = PictureObject()
+    @objc dynamic var gender = ""
+    @objc dynamic var email = ""
+    @objc dynamic var phone = ""
+    @objc dynamic var cell = ""
+    @objc dynamic var location: LocationObject? = LocationObject()
+    
+    override static func primaryKey() -> String? {
+        return "identifier"
+    }
+}
+
+extension User: Persistable {
+    
+    /// Create the `struct` based on the `Object` from the database.
+    /// If the`Object` is `nil`, it should initialize the struct appropriately.
+    init(managedObject: UserObject? = nil) {
+        if let managedObject = managedObject {
+            gender = managedObject.gender
+            email = managedObject.email
+            phone = managedObject.phone
+            cell = managedObject.cell
+            location = Location(managedObject: managedObject.location)
+            name = Name(managedObject: managedObject.name)
+            picture = Picture(managedObject: managedObject.picture)
+        } else {
+            gender = ""
+            email = ""
+            phone = ""
+            cell = ""
+            location = Location()
+            name = Name()
+            picture = Picture()
+        }
+    }
+    
+    /// Create the `Object` that will be stored in the database based on the `struct`.
+    func managedObject() -> UserObject {
+        let user = UserObject()
+        user.name = name.managedObject()
+        user.picture = picture.managedObject()
+        user.gender = gender
+        user.email = email
+        user.phone = phone
+        user.cell = cell
+        user.location = location.managedObject()
+        return user
     }
 }

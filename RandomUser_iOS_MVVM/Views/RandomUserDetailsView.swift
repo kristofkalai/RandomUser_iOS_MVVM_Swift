@@ -27,7 +27,7 @@ struct RandomUserDetailsView: View {
             WebImage.configure(url: url)
                 .skeleton(with: url == "", transition: .opacity, animated: .easeInOut)
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    run(2) {
                         self.url = self.user.picture.large
                     }
             }.clipShape(Circle())
@@ -79,6 +79,6 @@ private extension Text {
 
 struct RandomUserDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        RandomUserDetailsView(user: User.nilUser())
+        RandomUserDetailsView(user: User())
     }
 }
