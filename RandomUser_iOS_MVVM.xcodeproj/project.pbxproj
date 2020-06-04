@@ -17,8 +17,6 @@
 		7C23D78D2489423500BA6675 /* ImageServiceSDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7882489423500BA6675 /* ImageServiceSDWebImage.swift */; };
 		7C23D78E2489423500BA6675 /* ImageServiceKingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7892489423500BA6675 /* ImageServiceKingfisher.swift */; };
 		7C23D78F2489423500BA6675 /* ImageServiceFetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D78A2489423500BA6675 /* ImageServiceFetchImage.swift */; };
-		7C23D7902489423500BA6675 /* ImageServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D78B2489423500BA6675 /* ImageServiceProtocols.swift */; };
-		7C23D7912489423500BA6675 /* ImageServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D78C2489423500BA6675 /* ImageServiceContainer.swift */; };
 		7C23D7962489424A00BA6675 /* ApiServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7922489424900BA6675 /* ApiServiceContainer.swift */; };
 		7C23D7972489424A00BA6675 /* ApiServiceMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7932489424900BA6675 /* ApiServiceMoya.swift */; };
 		7C23D7982489424A00BA6675 /* ApiServiceAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */; };
@@ -45,7 +43,6 @@
 		7C388DB52481183B008D5DFF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C388DB42481183B008D5DFF /* SDWebImageSwiftUI */; };
 		7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */; };
 		7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */; };
-		7C388DBE248172C8008D5DFF /* WebImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */; };
 		7C76585C248711DB00D781C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585B248711DB00D781C9 /* Moya */; };
 		7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585E2487124F00D781C9 /* KingfisherSwiftUI */; };
 		7C7658622487127300D781C9 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7658612487127300D781C9 /* FetchImage */; };
@@ -65,8 +62,6 @@
 		7C23D7882489423500BA6675 /* ImageServiceSDWebImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceSDWebImage.swift; sourceTree = "<group>"; };
 		7C23D7892489423500BA6675 /* ImageServiceKingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceKingfisher.swift; sourceTree = "<group>"; };
 		7C23D78A2489423500BA6675 /* ImageServiceFetchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceFetchImage.swift; sourceTree = "<group>"; };
-		7C23D78B2489423500BA6675 /* ImageServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceProtocols.swift; sourceTree = "<group>"; };
-		7C23D78C2489423500BA6675 /* ImageServiceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceContainer.swift; sourceTree = "<group>"; };
 		7C23D7922489424900BA6675 /* ApiServiceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceContainer.swift; sourceTree = "<group>"; };
 		7C23D7932489424900BA6675 /* ApiServiceMoya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceMoya.swift; sourceTree = "<group>"; };
 		7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceAlamofire.swift; sourceTree = "<group>"; };
@@ -92,7 +87,6 @@
 		7C388DAB2481124D008D5DFF /* RandomUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsersViewModel.swift; sourceTree = "<group>"; };
 		7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +114,8 @@
 		7C23D77F248941B300BA6675 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
-				7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */,
 				7C23D7922489424900BA6675 /* ApiServiceContainer.swift */,
+				7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */,
 				7C23D7932489424900BA6675 /* ApiServiceMoya.swift */,
 				7C23D7952489424900BA6675 /* ApiServiceProtocols.swift */,
 			);
@@ -131,10 +125,8 @@
 		7C23D780248941C500BA6675 /* ImageService */ = {
 			isa = PBXGroup;
 			children = (
-				7C23D78C2489423500BA6675 /* ImageServiceContainer.swift */,
 				7C23D7892489423500BA6675 /* ImageServiceKingfisher.swift */,
 				7C23D78A2489423500BA6675 /* ImageServiceFetchImage.swift */,
-				7C23D78B2489423500BA6675 /* ImageServiceProtocols.swift */,
 				7C23D7882489423500BA6675 /* ImageServiceSDWebImage.swift */,
 			);
 			path = ImageService;
@@ -144,8 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				7C23D7822489422300BA6675 /* PersistenceServiceContainer.swift */,
-				7C23D7842489422400BA6675 /* PersistenceServiceProtocols.swift */,
 				7C23D7832489422300BA6675 /* PersistenceServiceRealm.swift */,
+				7C23D7842489422400BA6675 /* PersistenceServiceProtocols.swift */,
 			);
 			path = PersistenceService;
 			sourceTree = "<group>";
@@ -250,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */,
-				7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */,
 				7C23D77D24893A8400BA6675 /* TopLevel+Extensions.swift */,
 			);
 			path = Extensions;
@@ -358,9 +349,7 @@
 				7C23D77A248938EA00BA6675 /* LottieView.swift in Sources */,
 				7C388DAC2481124D008D5DFF /* RandomUsersViewModel.swift in Sources */,
 				7C23D7972489424A00BA6675 /* ApiServiceMoya.swift in Sources */,
-				7C388DBE248172C8008D5DFF /* WebImage+Extensions.swift in Sources */,
 				7C23D7982489424A00BA6675 /* ApiServiceAlamofire.swift in Sources */,
-				7C23D7912489423500BA6675 /* ImageServiceContainer.swift in Sources */,
 				7C388D9524811065008D5DFF /* Picture.swift in Sources */,
 				7C388D7424810FDA008D5DFF /* SceneDelegate.swift in Sources */,
 				7C23D7992489424A00BA6675 /* ApiServiceProtocols.swift in Sources */,
@@ -375,7 +364,6 @@
 				7C23D78F2489423500BA6675 /* ImageServiceFetchImage.swift in Sources */,
 				7C388D9824811065008D5DFF /* User.swift in Sources */,
 				7C388D9624811065008D5DFF /* ErrorTypes.swift in Sources */,
-				7C23D7902489423500BA6675 /* ImageServiceProtocols.swift in Sources */,
 				7C388D9924811065008D5DFF /* Name.swift in Sources */,
 				7C23D77E24893A8400BA6675 /* TopLevel+Extensions.swift in Sources */,
 				7C23D7872489422400BA6675 /* PersistenceServiceProtocols.swift in Sources */,

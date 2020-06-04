@@ -40,8 +40,10 @@ struct RandomUsersView: View {
                 NavigationLink(destination: RandomUserDetailsView(user: user), label: {
                     VStack {
                         HStack {
-                            WebImage.configure(url: user.picture.medium,
-                                               widthMultiplier: 0.2)
+                            ImageServiceFetchImage
+                                .load(url: user.picture.medium)
+                                .frame(width: UIScreen.width * 0.15,
+                                       height: UIScreen.width * 0.15)
                             Text(user.fullName)
                         }.frame(width: UIScreen.width,
                                 alignment: .leading)
@@ -50,8 +52,9 @@ struct RandomUsersView: View {
                     }
                 })
             )
+        }
         /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
-        } else {
+        else {
             return AnyView(
                 VStack {
                     LottieView(name: "loading")
@@ -62,7 +65,7 @@ struct RandomUsersView: View {
                     run(1.0) {
                         self.viewModel.getRandomUsers()
                     }
-                })
+                }).frame(height: UIScreen.width * 0.20)
             )
         }
     }

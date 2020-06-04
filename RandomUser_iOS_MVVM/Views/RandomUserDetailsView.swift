@@ -24,14 +24,17 @@ struct RandomUserDetailsView: View {
     
     var body: some View {
         return VStack() {
-            WebImage.configure(url: url)
+            ImageServiceFetchImage
+                .load(url: url)
                 .skeleton(with: url == "", transition: .opacity, animated: .easeInOut)
                 .onAppear {
                     run(2) {
                         self.url = self.user.picture.large
                     }
-            }.clipShape(Circle())
-            .frame(width: UIScreen.width * 0.8, height: UIScreen.width * 0.8)
+            }
+            .clipShape(Circle())
+            .frame(width: UIScreen.width * 0.8,
+                   height: UIScreen.width * 0.8)
             Spacer()
             Text.configure(accessibilitiesString).onFrame { frame in
                 self.onFrameRefresh(text: &self.accessibilitiesString, fullString: self.user.accessibilities)

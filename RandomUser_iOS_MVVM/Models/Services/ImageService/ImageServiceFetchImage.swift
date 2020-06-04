@@ -6,36 +6,39 @@
 //  Copyright © 2020. Kálai Kristóf. All rights reserved.
 //
 
-import UIKit
-import Nuke
+import SwiftUI
+import FetchImage
 
-/// The `ImageServiceProtocol` implemented by Nuke.
-class ImageServiceFetchImage: ImageServiceProtocol {
+class ImageServiceFetchImage {
     
     /// Load an url into the image.
     /// - Parameters:
     ///   - url: the url in `String` format of the image.
-    ///   - into: the `UIImageView` that will hold the image.
-    ///   - withDelay: seconds, after the image loading will start.
-    ///   - isLoadingPresenting: whether it shows a loading animation before it loaded.
-    ///   - completionHandler: will be called after the image loaded.
-    func load(url urlString: String, into imageView: UIImageView, withDelay delay: Double = 0.0, isLoadingPresenting loading: Bool = false, completionHandler: @escaping () -> Void = { }) {
-        
-        var activityIndicator: UIActivityIndicatorView? = nil
-        if loading {
-            // activityIndicator = imageView.setActivityIndicator()
-        }
-        
-        guard let url = URL(string: urlString) else { return }
-        
-        run(delay) {
-            let options = ImageLoadingOptions(
-                transition: .fadeIn(duration: 0.33)
-            )
-            Nuke.loadImage(with: url, options: options, into: imageView) { result in
-                activityIndicator?.stopAnimating()
-                completionHandler()
+    static func load(url: String) -> some View {
+        Group {
+            if URL(string: url) != nil {
+                ImageView(image: FetchImage(url: URL(string: url)!))
+            } else {
+                EmptyView()
             }
         }
+    }
+}
+
+struct ImageView: View {
+    
+    @ObservedObject var image: FetchImage
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(Color.gray)
+            image.view?
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        }
+        .animation(.default)
+        .onAppear(perform: image.fetch)
+        .onDisappear(perform: image.cancel)
     }
 }

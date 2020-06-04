@@ -50,11 +50,11 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
     /// Fetch some random users.
     func getRandomUsers(refresh: Bool = false) {
         
-        guard showRefreshView == false else { return }
-        
         if refresh {
             users.removeAll()
             seed = UUID().uuidString
+        } else {
+            guard showRefreshView == false else { return }
         }
         
         showRefreshView = true
@@ -96,6 +96,7 @@ extension RandomUsersViewModel {
         }
     }
     
+    /// Retrieve the cached users (if available, else it downloads some from the internet).
     private func getCachedUsers() {
         let users = self.persistenceService.objects(UserObject.self)
         for user in users {
