@@ -60,14 +60,18 @@ struct RandomUsersView: View {
                     }
                 })
             )
-        /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
+            /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
         } else {
             return AnyView(
                 VStack {
-                    ActivityIndicator()
+                    LottieView(name: "loading")
+                        .frame(width: UIScreen.width * 0.15,
+                               height: UIScreen.width * 0.15)
                     Divider()
                 }.onAppear(perform: {
-                    self.viewModel.getRandomUsers()
+                    run(1.0) {
+                        self.viewModel.getRandomUsers()
+                    }
                 })
             )
         }

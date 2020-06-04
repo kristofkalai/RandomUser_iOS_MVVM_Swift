@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = 7C23D7772489301D00BA6675 /* DisplayLink */; };
+		7C23D77A248938EA00BA6675 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D779248938EA00BA6675 /* LottieView.swift */; };
+		7C23D77C2489395C00BA6675 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C23D77B2489395B00BA6675 /* loading.json */; };
+		7C23D77E24893A8400BA6675 /* TopLevel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D77D24893A8400BA6675 /* TopLevel+Extensions.swift */; };
 		7C388D7224810FDA008D5DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388D7124810FDA008D5DFF /* AppDelegate.swift */; };
 		7C388D7424810FDA008D5DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388D7324810FDA008D5DFF /* SceneDelegate.swift */; };
 		7C388D7824810FDC008D5DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C388D7724810FDC008D5DFF /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C23D779248938EA00BA6675 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7C23D77B2489395B00BA6675 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		7C23D77D24893A8400BA6675 /* TopLevel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopLevel+Extensions.swift"; sourceTree = "<group>"; };
 		7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser_iOS_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C388D7124810FDA008D5DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C388D7324810FDA008D5DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		7C388D6524810FDA008D5DFF = {
 			isa = PBXGroup;
 			children = (
+				7C23D77B2489395B00BA6675 /* loading.json */,
 				7C388D7024810FDA008D5DFF /* RandomUser_iOS_MVVM */,
 				7C388D6F24810FDA008D5DFF /* Products */,
 			);
@@ -136,6 +143,7 @@
 				7C388DA5248111B3008D5DFF /* RandomUsersView.swift */,
 				7C388DA9248111CF008D5DFF /* RandomUserDetailsView.swift */,
 				7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */,
+				7C23D779248938EA00BA6675 /* LottieView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			children = (
 				7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */,
 				7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */,
+				7C23D77D24893A8400BA6675 /* TopLevel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			files = (
 				7C388D7E24810FDC008D5DFF /* LaunchScreen.storyboard in Resources */,
 				7C388D7B24810FDC008D5DFF /* Preview Assets.xcassets in Resources */,
+				7C23D77C2489395C00BA6675 /* loading.json in Resources */,
 				7C388D7824810FDC008D5DFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C388D7224810FDA008D5DFF /* AppDelegate.swift in Sources */,
+				7C23D77A248938EA00BA6675 /* LottieView.swift in Sources */,
 				7C388DAC2481124D008D5DFF /* RandomUsersViewModel.swift in Sources */,
 				7C388DBE248172C8008D5DFF /* WebImage+Extensions.swift in Sources */,
 				7C388D9524811065008D5DFF /* Picture.swift in Sources */,
@@ -300,6 +311,7 @@
 				7C388D9824811065008D5DFF /* User.swift in Sources */,
 				7C388D9624811065008D5DFF /* ErrorTypes.swift in Sources */,
 				7C388D9924811065008D5DFF /* Name.swift in Sources */,
+				7C23D77E24893A8400BA6675 /* TopLevel+Extensions.swift in Sources */,
 				7C388DA2248110EC008D5DFF /* Protocols.swift in Sources */,
 				7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */,
 				7C388D9C24811065008D5DFF /* UserServiceAlamofire.swift in Sources */,
