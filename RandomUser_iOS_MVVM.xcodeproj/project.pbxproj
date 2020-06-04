@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = 7C23D7772489301D00BA6675 /* DisplayLink */; };
 		7C388D7224810FDA008D5DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388D7124810FDA008D5DFF /* AppDelegate.swift */; };
 		7C388D7424810FDA008D5DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388D7324810FDA008D5DFF /* SceneDelegate.swift */; };
 		7C388D7824810FDC008D5DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C388D7724810FDC008D5DFF /* Assets.xcassets */; };
@@ -31,8 +32,6 @@
 		7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */; };
 		7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */; };
 		7C388DBE248172C8008D5DFF /* WebImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */; };
-		7C7658572486F9F200D781C9 /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7658562486F9F200D781C9 /* DisplayLink.swift */; };
-		7C7658592486FA2B00D781C9 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7658582486FA2B00D781C9 /* View+Extensions.swift */; };
 		7C76585C248711DB00D781C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585B248711DB00D781C9 /* Moya */; };
 		7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585E2487124F00D781C9 /* KingfisherSwiftUI */; };
 		7C7658622487127300D781C9 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7658612487127300D781C9 /* FetchImage */; };
@@ -66,8 +65,6 @@
 		7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebImage+Extensions.swift"; sourceTree = "<group>"; };
-		7C7658562486F9F200D781C9 /* DisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
-		7C7658582486FA2B00D781C9 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +79,7 @@
 				7C765865248712C900D781C9 /* RealmSwift in Frameworks */,
 				7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */,
 				7C76585C248711DB00D781C9 /* Moya in Frameworks */,
+				7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */,
 				7C7658622487127300D781C9 /* FetchImage in Frameworks */,
 				7C388DA0248110A0008D5DFF /* Alamofire in Frameworks */,
 				7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */,
@@ -138,7 +136,6 @@
 				7C388DA5248111B3008D5DFF /* RandomUsersView.swift */,
 				7C388DA9248111CF008D5DFF /* RandomUserDetailsView.swift */,
 				7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */,
-				7C7658562486F9F200D781C9 /* DisplayLink.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,7 +186,6 @@
 			children = (
 				7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */,
 				7C388DBD248172C8008D5DFF /* WebImage+Extensions.swift */,
-				7C7658582486FA2B00D781C9 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +217,7 @@
 				7C7658672487134000D781C9 /* Hero */,
 				7C76586A2487136400D781C9 /* Lottie */,
 				7C76586D2487140800D781C9 /* SkeletonUI */,
+				7C23D7772489301D00BA6675 /* DisplayLink */,
 			);
 			productName = RandomUser_iOS_MVVM;
 			productReference = 7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */;
@@ -261,6 +258,7 @@
 				7C7658662487134000D781C9 /* XCRemoteSwiftPackageReference "Hero" */,
 				7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+				7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */,
 			);
 			productRefGroup = 7C388D6F24810FDA008D5DFF /* Products */;
 			projectDirPath = "";
@@ -300,14 +298,12 @@
 				7C388DA6248111B3008D5DFF /* RandomUsersView.swift in Sources */,
 				7C388DAA248111CF008D5DFF /* RandomUserDetailsView.swift in Sources */,
 				7C388D9824811065008D5DFF /* User.swift in Sources */,
-				7C7658572486F9F200D781C9 /* DisplayLink.swift in Sources */,
 				7C388D9624811065008D5DFF /* ErrorTypes.swift in Sources */,
 				7C388D9924811065008D5DFF /* Name.swift in Sources */,
 				7C388DA2248110EC008D5DFF /* Protocols.swift in Sources */,
 				7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */,
 				7C388D9C24811065008D5DFF /* UserServiceAlamofire.swift in Sources */,
 				7C388D9724811065008D5DFF /* Street.swift in Sources */,
-				7C7658592486FA2B00D781C9 /* View+Extensions.swift in Sources */,
 				7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +502,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timdonnelly/DisplayLink";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		7C388D9E248110A0008D5DFF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -589,6 +593,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C23D7772489301D00BA6675 /* DisplayLink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */;
+			productName = DisplayLink;
+		};
 		7C388D9F248110A0008D5DFF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C388D9E248110A0008D5DFF /* XCRemoteSwiftPackageReference "Alamofire" */;

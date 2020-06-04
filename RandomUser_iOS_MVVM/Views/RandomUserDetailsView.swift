@@ -8,6 +8,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import DisplayLink
 
 /// The second screen.
 struct RandomUserDetailsView: View {
