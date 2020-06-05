@@ -49,6 +49,7 @@
 		7C765865248712C900D781C9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C765864248712C900D781C9 /* RealmSwift */; };
 		7C76586B2487136400D781C9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76586A2487136400D781C9 /* Lottie */; };
 		7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76586D2487140800D781C9 /* SkeletonUI */; };
+		7CD2004A248AC9AE005A4A71 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7CD20049248AC9AE005A4A71 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 				7C76586B2487136400D781C9 /* Lottie in Frameworks */,
 				7C765865248712C900D781C9 /* RealmSwift in Frameworks */,
 				7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */,
+				7CD2004A248AC9AE005A4A71 /* Swinject in Frameworks */,
 				7C76585C248711DB00D781C9 /* Moya in Frameworks */,
 				7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */,
 				7C7658622487127300D781C9 /* FetchImage in Frameworks */,
@@ -272,6 +274,7 @@
 				7C76586A2487136400D781C9 /* Lottie */,
 				7C76586D2487140800D781C9 /* SkeletonUI */,
 				7C23D7772489301D00BA6675 /* DisplayLink */,
+				7CD20049248AC9AE005A4A71 /* Swinject */,
 			);
 			productName = RandomUser_iOS_MVVM;
 			productReference = 7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */;
@@ -312,6 +315,7 @@
 				7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 				7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */,
+				7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 7C388D6F24810FDA008D5DFF /* Products */;
 			projectDirPath = "";
@@ -646,6 +650,14 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -698,6 +710,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
 			productName = SkeletonUI;
+		};
+		7CD20049248AC9AE005A4A71 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

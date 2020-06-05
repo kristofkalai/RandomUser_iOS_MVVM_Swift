@@ -8,30 +8,8 @@
 
 import Foundation
 
-// MARK: - Manages the app's network communications.
-class ApiServiceContainer {
-    
-    /// Supports the 2 major HTTP communication external libraries.
-    enum USType {
-        case alamofire
-        case moya
-    }
-    
-    let service: ApiServiceProtocol
-    
-    init(_ usType: USType = .alamofire) {
-        switch usType {
-        case .alamofire:
-            service = ApiServiceAlamofire()
-        case .moya:
-            service = ApiServiceAlamofire()
-        }
-    }
-}
-
-// MARK: - Implement the delegate pattern.
-/// Delegate all of the `ApiServiceContainerProtocol` methods to the `service` property.
-extension ApiServiceContainer: ApiServiceContainerProtocol {
+// MARK: - Store the network communication's data.
+class ApiServiceContainer: ApiServiceContainerProtocol {
     
     /// The API URL (in `String` format).
     /// - Note:

@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    static let container: Container = {
+        let container = Container()
+        container.register(ApiServiceProtocol.self) { _ in ApiServiceAlamofire() }
+        return container
+    }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
