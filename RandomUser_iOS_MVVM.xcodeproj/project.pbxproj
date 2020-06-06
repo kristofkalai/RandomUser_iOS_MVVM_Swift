@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0B50C4248BFC950072C4B4 /* ApiServiceJust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B50C3248BFC950072C4B4 /* ApiServiceJust.swift */; };
+		7C0B50C7248BFCE10072C4B4 /* Just in Frameworks */ = {isa = PBXBuildFile; productRef = 7C0B50C6248BFCE10072C4B4 /* Just */; };
 		7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = 7C23D7772489301D00BA6675 /* DisplayLink */; };
 		7C23D77A248938EA00BA6675 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D779248938EA00BA6675 /* LottieView.swift */; };
 		7C23D77C2489395C00BA6675 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C23D77B2489395B00BA6675 /* loading.json */; };
@@ -53,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0B50C3248BFC950072C4B4 /* ApiServiceJust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceJust.swift; sourceTree = "<group>"; };
 		7C23D779248938EA00BA6675 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		7C23D77B2489395B00BA6675 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		7C23D77D24893A8400BA6675 /* TopLevel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopLevel+Extensions.swift"; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 				7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */,
 				7C7658622487127300D781C9 /* FetchImage in Frameworks */,
 				7C388DA0248110A0008D5DFF /* Alamofire in Frameworks */,
+				7C0B50C7248BFCE10072C4B4 /* Just in Frameworks */,
 				7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +121,7 @@
 				7C23D7922489424900BA6675 /* ApiServiceContainer.swift */,
 				7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */,
 				7C23D7932489424900BA6675 /* ApiServiceMoya.swift */,
+				7C0B50C3248BFC950072C4B4 /* ApiServiceJust.swift */,
 				7C23D7952489424900BA6675 /* ApiServiceProtocols.swift */,
 			);
 			path = ApiService;
@@ -275,6 +280,7 @@
 				7C76586D2487140800D781C9 /* SkeletonUI */,
 				7C23D7772489301D00BA6675 /* DisplayLink */,
 				7CD20049248AC9AE005A4A71 /* Swinject */,
+				7C0B50C6248BFCE10072C4B4 /* Just */,
 			);
 			productName = RandomUser_iOS_MVVM;
 			productReference = 7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */;
@@ -316,6 +322,7 @@
 				7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 				7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */,
 				7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */,
+				7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */,
 			);
 			productRefGroup = 7C388D6F24810FDA008D5DFF /* Products */;
 			projectDirPath = "";
@@ -360,6 +367,7 @@
 				7C388D9B24811065008D5DFF /* RuntimeError.swift in Sources */,
 				7C388D9424811065008D5DFF /* Location.swift in Sources */,
 				7C388DA6248111B3008D5DFF /* RandomUsersView.swift in Sources */,
+				7C0B50C4248BFC950072C4B4 /* ApiServiceJust.swift in Sources */,
 				7C388DAA248111CF008D5DFF /* RandomUserDetailsView.swift in Sources */,
 				7C23D78F2489423500BA6675 /* ImageServiceFetchImage.swift in Sources */,
 				7C388D9824811065008D5DFF /* User.swift in Sources */,
@@ -570,6 +578,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dduan/Just";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
 		7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/timdonnelly/DisplayLink";
@@ -661,6 +677,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C0B50C6248BFCE10072C4B4 /* Just */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */;
+			productName = Just;
+		};
 		7C23D7772489301D00BA6675 /* DisplayLink */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */;

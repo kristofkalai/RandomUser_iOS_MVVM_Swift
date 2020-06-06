@@ -1,16 +1,16 @@
 //
-//  UserService.swift
-//  RandomUser
+//  ApiServiceJust.swift
+//  RandomUser_iOS_MVVM
 //
-//  Created by Kálai Kristóf on 2020. 05. 12..
+//  Created by Kálai Kristóf on 2020. 06. 06..
 //  Copyright © 2020. Kálai Kristóf. All rights reserved.
 //
 
-import Alamofire
 import Foundation
+import Just
 
-/// The `ApiServiceProtocol` implemented by Alamofire.
-class ApiServiceAlamofire: ApiServiceProtocol {
+/// The `ApiServiceProtocol` implemented by Just.
+class ApiServiceJust: ApiServiceProtocol {
     
     /// Download random users with the given parameters.
     /// - Parameters:
@@ -23,17 +23,17 @@ class ApiServiceAlamofire: ApiServiceProtocol {
             completion(.failure(.cannotBeReached))
             return
         }
-        AF.request(url).responseJSON { response in
-            if response.error != nil || response.response?.statusCode == nil {
-                completion(.failure(.wrongRequest))
-            } else if response.response!.statusCode < 400 {
-                guard let userResult = UserResult(data: response.data) else {
+        Just.get(url) { result in
+            run {
+                if result.ok {
+                    guard let userResult = UserResult(data: result.content) else {
+                        completion(.failure(.unexpectedError))
+                        return
+                    }
+                    completion(.success(userResult.results))
+                } else {
                     completion(.failure(.unexpectedError))
-                    return
                 }
-                completion(.success(userResult.results))
-            } else {
-                completion(.failure(.unexpectedError))
             }
         }
     }

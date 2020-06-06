@@ -13,6 +13,9 @@ protocol ApiServiceContainerProtocol {
     
     /// The API URL (in `String` format).
     static func getBaseApiUrl() -> String
+    
+    /// Creates an `URL` with the given query parameters.
+    static func createUrl(_ page: Int, _ results: Int, _ seed: String) -> URL?
 }
 
 // MARK: - ApiService part.

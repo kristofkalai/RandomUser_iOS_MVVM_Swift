@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     static let container: Container = {
         let container = Container()
-        container.register(ApiServiceProtocol.self) { _ in ApiServiceAlamofire() }
+        container.register(ApiServiceProtocol.self) { _ in ApiServiceJust() }
         return container
     }()
     

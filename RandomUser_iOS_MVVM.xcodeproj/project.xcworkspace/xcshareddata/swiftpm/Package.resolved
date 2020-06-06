@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "Just",
+        "repositoryURL": "https://github.com/dduan/Just",
+        "state": {
+          "branch": null,
+          "revision": "1824bf84cf52d11d69ae20cfb89f0ce5bffa5650",
+          "version": "0.8.0"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {
