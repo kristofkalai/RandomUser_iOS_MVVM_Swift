@@ -10,36 +10,35 @@ import UIKit
 import Swinject
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+final class AppDelegate: UIResponder {
     static let container: Container = {
         let container = Container()
         container.register(ApiServiceProtocol.self) { _ in ApiServiceJust() }
         return container
     }()
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.red]
+}
+
+extension AppDelegate: UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        //UINavigationBar.appearance().backgroundColor = .black
-        
+
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = .white
-        navigationBarAppearace.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationBarAppearace.topItem?.backBarButtonItem = UIBarButtonItem(title: .init(), style: .plain, target: nil, action: nil)
         navigationBarAppearace.barTintColor = .clear
-        
+
         UITableView.appearance().backgroundColor = .clear // tableview background
         UITableViewCell.appearance().backgroundColor = .clear
-        
+
         return true
     }
-    
+
     // MARK: UISceneSession Lifecycle
-    
+
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-    
+
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) { }
 }

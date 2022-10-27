@@ -11,12 +11,8 @@ import Foundation
 /// A custom `Error` struct, that used to be thrown in connection with a network request - response.
 struct RuntimeError: LocalizedError {
     let message: String
-    
-    init(_ message: String) {
-        self.message = message
-    }
-    
+
     var errorDescription: String? {
-        return message
+        message
     }
 }

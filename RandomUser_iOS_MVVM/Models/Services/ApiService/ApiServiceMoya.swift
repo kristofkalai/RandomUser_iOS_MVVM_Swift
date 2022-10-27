@@ -21,27 +21,27 @@ extension MoyaEnums: TargetType {
         case .randomUsers: return ""
         }
     }
-    
+
     var method: Moya.Method {
         switch self {
         case .randomUsers: return .get
         }
     }
-    
+
     var sampleData: Data {
         switch self {
         case .randomUsers:
             guard let url = Bundle.main.url(forResource: "sample", withExtension: "json"),
-                let data = try? Data(contentsOf: url) else {
-                    return Data()
+                  let data = try? Data(contentsOf: url) else {
+                return Data()
             }
             return data
         }
     }
-    
+
     var task: Task {
         switch self {
-        case .randomUsers(let page, let results, let seed):
+        case let .randomUsers(page, results, seed):
             return .requestParameters(parameters: [
                 "inc" : "name,picture,gender,location,email,phone,cell",
                 "page" : String(page),
@@ -50,19 +50,18 @@ extension MoyaEnums: TargetType {
             ], encoding: URLEncoding.queryString)
         }
     }
-    
+
     var headers: [String : String]? {
         nil
     }
-    
+
     var baseURL: URL {
-        return URL(string: ApiServiceContainer.getBaseApiUrl())!
+        URL(string: ApiServiceContainer.getBaseApiUrl())!
     }
 }
 
 /// The `ApiServiceProtocol` implemented by Moya.
-class ApiServiceMoya: ApiServiceProtocol {
-    
+final class ApiServiceMoya: ApiServiceProtocol {
     /// Download random users with the given parameters.
     /// - Parameters:
     ///   - page: the page that wanted to be downloaded.
@@ -81,7 +80,7 @@ class ApiServiceMoya: ApiServiceProtocol {
                     return
                 }
                 completion(.success(userResult.results))
-            case .failure(_):
+            case .failure:
                 completion(.failure(.unexpectedError))
             }
         }

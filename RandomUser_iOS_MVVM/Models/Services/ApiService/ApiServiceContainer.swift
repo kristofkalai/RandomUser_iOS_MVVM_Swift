@@ -9,16 +9,15 @@
 import Foundation
 
 // MARK: - Store the network communication's data.
-class ApiServiceContainer: ApiServiceContainerProtocol {
-    
+final class ApiServiceContainer: ApiServiceContainerProtocol {
     /// The API URL (in `String` format).
     /// - Note:
     /// The number in the `String` indicate the used version of the API.
     /// With `1.3` it works fine, but maybe a newer version would break the implementation.
     static func getBaseApiUrl() -> String {
-        return "https://randomuser.me/api/1.3/"
+        "https://randomuser.me/api/1.3/"
     }
-    
+
     /// Creates an `URL` with the given query parameters.
     /// - Note:
     /// The `URL` stores that too, that which data will be requested.
@@ -28,9 +27,8 @@ class ApiServiceContainer: ApiServiceContainerProtocol {
                           URLQueryItem(name: "page", value: String(page)),
                           URLQueryItem(name: "results", value: String(results)),
                           URLQueryItem(name: "seed", value: String(seed))]
-        guard var urlComps = URLComponents(string: ApiServiceContainer.getBaseApiUrl()) else { return nil }
-        urlComps.queryItems = queryItems
-        guard let url = urlComps.url else { return nil }
-        return url
+        var urlComponents = URLComponents(string: ApiServiceContainer.getBaseApiUrl())
+        urlComponents?.queryItems = queryItems
+        return urlComponents?.url
     }
 }

@@ -7,66 +7,58 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 import SwiftUIPullToRefresh
 import SkeletonUI
 
 /// The content of the first screen.
 struct RandomUsersView: View {
-    
-    @ObservedObject var viewModel = RandomUsersViewModel()
-    
-    @ViewBuilder
+    @ObservedObject private var viewModel = RandomUsersViewModel()
+
     var body: some View {
-        
         RefreshableNavigationView(title: "Random users",
                                   showRefreshView: $viewModel.showRefreshView,
                                   displayMode: .inline,
                                   action: {
-                                    self.viewModel.getRandomUsers(refresh: true)
-        }){
-            ForEach(self.viewModel.users) { user in
-                self.buildRow(user)
-            }
+            viewModel.getRandomUsers(refresh: true)
+        }) {
+            ForEach(viewModel.users, content: buildRow)
         }
     }
-    
+}
+
+extension RandomUsersView {
     /// Function to build the rows on the main screen.
-    func buildRow(_ user: User) -> AnyView {
-        
+    @ViewBuilder private func buildRow(_ user: User) -> some View {
         /// If the current element is not nilUser, then if contains some real data.
-        if user.email != "" {
-            return AnyView(
-                NavigationLink(destination: RandomUserDetailsView(user: user), label: {
-                    VStack {
-                        HStack {
-                            ImageServiceFetchImage
-                                .load(url: user.picture.medium)
-                                .frame(width: UIScreen.width * 0.15,
-                                       height: UIScreen.width * 0.15)
-                            Text(user.fullName)
-                        }.frame(width: UIScreen.width,
-                                alignment: .leading)
-                            .background(Color.clear)
-                        Divider()
-                    }
-                })
-            )
-        }
-        /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
-        else {
-            return AnyView(
+        if user.email != .init() {
+            NavigationLink(destination: RandomUserDetailsView(user: user), label: {
                 VStack {
-                    LottieView(name: "loading")
-                        .frame(width: UIScreen.width * 0.15,
-                               height: UIScreen.width * 0.15)
-                    Divider()
-                }.onAppear(perform: {
-                    run(1.0) {
-                        self.viewModel.getRandomUsers()
+                    HStack {
+                        ImageServiceNuke
+                            .load(url: user.picture.medium)
+                            .frame(width: UIScreen.width * 0.15,
+                                   height: UIScreen.width * 0.15)
+                        Text(user.fullName)
                     }
-                }).frame(height: UIScreen.width * 0.20)
-            )
+                    .frame(width: UIScreen.width,
+                           alignment: .leading)
+                    .background(Color.clear)
+                    .padding(.leading, UIScreen.width * 0.15)
+                }
+            })
+        } else {
+            /// Else it just dummy object, so it shows a loading indicator, and starts to fetch some more data.
+            VStack {
+                LottieView(name: "loading")
+                    .frame(width: UIScreen.width * 0.15,
+                           height: UIScreen.width * 0.15)
+            }
+            .onAppear {
+                run(1.0) {
+                    viewModel.getRandomUsers()
+                }
+            }
+            .frame(height: UIScreen.width * 0.20)
         }
     }
 }

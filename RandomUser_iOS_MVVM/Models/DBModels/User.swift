@@ -10,9 +10,8 @@ import Foundation
 import RealmSwift
 
 struct User: Codable, Identifiable {
-    
     var id = UUID()
-    
+
     let name: Name
     let picture: Picture
     let gender: String
@@ -20,49 +19,47 @@ struct User: Codable, Identifiable {
     let phone: String
     let cell: String
     let location: Location
-    
+
     private enum CodingKeys: String, CodingKey {
         case name, picture, gender, email, phone, cell, location
     }
-    
+
     /// Returns the full name (firstly the first name and then the last).
     var fullName: String {
-        return "\(name.title) \(name.first) \(name.last)"
+        "\(name.title) \(name.first) \(name.last)"
     }
-    
+
     /// Returns the ways the user can be reached in a formatted `String`.
     var accessibilities: String {
-        return "Contacts:\n\tEmail: \(email)\n\tCellphone: \(cell)\n\tPhone: \(phone)"
+        "Contacts:\n\tEmail: \(email)\n\tCellphone: \(cell)\n\tPhone: \(phone)"
     }
-    
+
     /// Returns the location of the user in a formatted `String`.
     var expandedLocation: String {
-        return "Address:\n\t\(location.country), \(location.state), \(location.city)\n\tStreet \(location.street.name) \(location.street.number)"
+        "Address:\n\t\(location.country), \(location.state), \(location.city)\n\tStreet \(location.street.name) \(location.street.number)"
     }
 }
 
 final class UserObject: Object {
-    
     @objc dynamic var identifier = UUID().uuidString
-    @objc dynamic var name: NameObject? = NameObject()
-    @objc dynamic var picture: PictureObject? = PictureObject()
+    @objc dynamic var name: NameObject? = .init()
+    @objc dynamic var picture: PictureObject? = .init()
     @objc dynamic var gender = ""
     @objc dynamic var email = ""
     @objc dynamic var phone = ""
     @objc dynamic var cell = ""
-    @objc dynamic var location: LocationObject? = LocationObject()
-    
+    @objc dynamic var location: LocationObject? = .init()
+
     override static func primaryKey() -> String? {
-        return "identifier"
+        "identifier"
     }
 }
 
 extension User: Persistable {
-    
     /// Create the `struct` based on the `Object` from the database.
     /// If the`Object` is `nil`, it should initialize the struct appropriately.
     init(managedObject: UserObject? = nil) {
-        if let managedObject = managedObject {
+        if let managedObject {
             gender = managedObject.gender
             email = managedObject.email
             phone = managedObject.phone
@@ -80,7 +77,7 @@ extension User: Persistable {
             picture = Picture()
         }
     }
-    
+
     /// Create the `Object` that will be stored in the database based on the `struct`.
     func managedObject() -> UserObject {
         let user = UserObject()

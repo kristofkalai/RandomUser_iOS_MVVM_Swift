@@ -9,15 +9,14 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-class ImageServiceSDWebImage {
-    
+final class ImageServiceSDWebImage {
     /// Load an url into the image.
     /// - Parameters:
     ///   - url: the url in `String` format of the image.
     static func load(url: String) -> some View {
         Group {
-            if URL(string: url) != nil {
-                WebImage(url: URL(string: url)!).resizable()
+            if let url = URL(string: url) {
+                WebImage(url: url).resizable()
             } else {
                 EmptyView()
             }

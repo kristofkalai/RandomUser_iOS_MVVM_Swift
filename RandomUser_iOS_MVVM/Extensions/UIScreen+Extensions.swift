@@ -6,16 +6,15 @@
 //  Copyright © 2020. Kálai Kristóf. All rights reserved.
 //
 
-import SwiftUI
+import UIKit
 
-/// UIScreen extension for the more convinient methods.
+/// UIScreen extension for the more convinient access.
 extension UIScreen {
-    
     static var width: CGFloat {
-        return UIScreen.main.bounds.width
+        UIScreen.main.bounds.width
     }
-    
+
     static var height: CGFloat {
-        return UIScreen.main.bounds.height
+        UIScreen.main.bounds.height
     }
 }

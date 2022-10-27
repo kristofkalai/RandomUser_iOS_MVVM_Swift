@@ -10,8 +10,7 @@ import Foundation
 import Just
 
 /// The `ApiServiceProtocol` implemented by Just.
-class ApiServiceJust: ApiServiceProtocol {
-    
+final class ApiServiceJust: ApiServiceProtocol {
     /// Download random users with the given parameters.
     /// - Parameters:
     ///   - page: the page that wanted to be downloaded.

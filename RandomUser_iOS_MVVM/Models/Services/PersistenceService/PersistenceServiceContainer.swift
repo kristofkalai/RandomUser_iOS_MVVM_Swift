@@ -9,15 +9,14 @@
 import RealmSwift
 
 // MARK: - Manages the app's persistence.
-class PersistenceServiceContainer {
-    
+final class PersistenceServiceContainer {
     /// Supports the 1 major external library.
     enum PSType {
         case realm
     }
-    
+
     let service: PersistenceServiceProtocol
-    
+
     init(_ psType: PSType = .realm) {
         switch psType {
         case .realm:

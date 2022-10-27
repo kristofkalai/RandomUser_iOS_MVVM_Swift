@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58B4B469290B1BC800B768C2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58B4B468290B1BC800B768C2 /* Kingfisher */; };
+		58B4B46D290B1DE500B768C2 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 58B4B46C290B1DE500B768C2 /* NukeUI */; };
 		7C0B50C4248BFC950072C4B4 /* ApiServiceJust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B50C3248BFC950072C4B4 /* ApiServiceJust.swift */; };
 		7C0B50C7248BFCE10072C4B4 /* Just in Frameworks */ = {isa = PBXBuildFile; productRef = 7C0B50C6248BFCE10072C4B4 /* Just */; };
 		7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = 7C23D7772489301D00BA6675 /* DisplayLink */; };
@@ -18,7 +20,7 @@
 		7C23D7872489422400BA6675 /* PersistenceServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7842489422400BA6675 /* PersistenceServiceProtocols.swift */; };
 		7C23D78D2489423500BA6675 /* ImageServiceSDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7882489423500BA6675 /* ImageServiceSDWebImage.swift */; };
 		7C23D78E2489423500BA6675 /* ImageServiceKingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7892489423500BA6675 /* ImageServiceKingfisher.swift */; };
-		7C23D78F2489423500BA6675 /* ImageServiceFetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D78A2489423500BA6675 /* ImageServiceFetchImage.swift */; };
+		7C23D78F2489423500BA6675 /* ImageServiceNuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D78A2489423500BA6675 /* ImageServiceNuke.swift */; };
 		7C23D7962489424A00BA6675 /* ApiServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7922489424900BA6675 /* ApiServiceContainer.swift */; };
 		7C23D7972489424A00BA6675 /* ApiServiceMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7932489424900BA6675 /* ApiServiceMoya.swift */; };
 		7C23D7982489424A00BA6675 /* ApiServiceAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */; };
@@ -46,8 +48,6 @@
 		7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */; };
 		7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */; };
 		7C76585C248711DB00D781C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585B248711DB00D781C9 /* Moya */; };
-		7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76585E2487124F00D781C9 /* KingfisherSwiftUI */; };
-		7C7658622487127300D781C9 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7658612487127300D781C9 /* FetchImage */; };
 		7C765865248712C900D781C9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C765864248712C900D781C9 /* RealmSwift */; };
 		7C76586B2487136400D781C9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76586A2487136400D781C9 /* Lottie */; };
 		7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C76586D2487140800D781C9 /* SkeletonUI */; };
@@ -64,7 +64,7 @@
 		7C23D7842489422400BA6675 /* PersistenceServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceServiceProtocols.swift; sourceTree = "<group>"; };
 		7C23D7882489423500BA6675 /* ImageServiceSDWebImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceSDWebImage.swift; sourceTree = "<group>"; };
 		7C23D7892489423500BA6675 /* ImageServiceKingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceKingfisher.swift; sourceTree = "<group>"; };
-		7C23D78A2489423500BA6675 /* ImageServiceFetchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceFetchImage.swift; sourceTree = "<group>"; };
+		7C23D78A2489423500BA6675 /* ImageServiceNuke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceNuke.swift; sourceTree = "<group>"; };
 		7C23D7922489424900BA6675 /* ApiServiceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceContainer.swift; sourceTree = "<group>"; };
 		7C23D7932489424900BA6675 /* ApiServiceMoya.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceMoya.swift; sourceTree = "<group>"; };
 		7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceAlamofire.swift; sourceTree = "<group>"; };
@@ -97,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B4B46D290B1DE500B768C2 /* NukeUI in Frameworks */,
+				58B4B469290B1BC800B768C2 /* Kingfisher in Frameworks */,
 				7C388DB52481183B008D5DFF /* SDWebImageSwiftUI in Frameworks */,
 				7C388DB224811797008D5DFF /* SwiftUIPullToRefresh in Frameworks */,
 				7C76586B2487136400D781C9 /* Lottie in Frameworks */,
@@ -105,16 +107,21 @@
 				7CD2004A248AC9AE005A4A71 /* Swinject in Frameworks */,
 				7C76585C248711DB00D781C9 /* Moya in Frameworks */,
 				7C23D7782489301D00BA6675 /* DisplayLink in Frameworks */,
-				7C7658622487127300D781C9 /* FetchImage in Frameworks */,
 				7C388DA0248110A0008D5DFF /* Alamofire in Frameworks */,
 				7C0B50C7248BFCE10072C4B4 /* Just in Frameworks */,
-				7C76585F2487124F00D781C9 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58B4B467290B1BC800B768C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C23D77F248941B300BA6675 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				7C23D7892489423500BA6675 /* ImageServiceKingfisher.swift */,
-				7C23D78A2489423500BA6675 /* ImageServiceFetchImage.swift */,
+				7C23D78A2489423500BA6675 /* ImageServiceNuke.swift */,
 				7C23D7882489423500BA6675 /* ImageServiceSDWebImage.swift */,
 			);
 			path = ImageService;
@@ -153,6 +160,7 @@
 				7C23D77B2489395B00BA6675 /* loading.json */,
 				7C388D7024810FDA008D5DFF /* RandomUser_iOS_MVVM */,
 				7C388D6F24810FDA008D5DFF /* Products */,
+				58B4B467290B1BC800B768C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,14 +281,14 @@
 				7C388DB124811797008D5DFF /* SwiftUIPullToRefresh */,
 				7C388DB42481183B008D5DFF /* SDWebImageSwiftUI */,
 				7C76585B248711DB00D781C9 /* Moya */,
-				7C76585E2487124F00D781C9 /* KingfisherSwiftUI */,
-				7C7658612487127300D781C9 /* FetchImage */,
 				7C765864248712C900D781C9 /* RealmSwift */,
 				7C76586A2487136400D781C9 /* Lottie */,
 				7C76586D2487140800D781C9 /* SkeletonUI */,
 				7C23D7772489301D00BA6675 /* DisplayLink */,
 				7CD20049248AC9AE005A4A71 /* Swinject */,
 				7C0B50C6248BFCE10072C4B4 /* Just */,
+				58B4B468290B1BC800B768C2 /* Kingfisher */,
+				58B4B46C290B1DE500B768C2 /* NukeUI */,
 			);
 			productName = RandomUser_iOS_MVVM;
 			productReference = 7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */;
@@ -316,13 +324,13 @@
 				7C388DB32481183B008D5DFF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */,
 				7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				7C7658602487127300D781C9 /* XCRemoteSwiftPackageReference "FetchImage" */,
 				7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 				7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */,
 				7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */,
 				7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */,
+				58B4B466290B1AB400B768C2 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 7C388D6F24810FDA008D5DFF /* Products */;
 			projectDirPath = "";
@@ -369,7 +377,7 @@
 				7C388DA6248111B3008D5DFF /* RandomUsersView.swift in Sources */,
 				7C0B50C4248BFC950072C4B4 /* ApiServiceJust.swift in Sources */,
 				7C388DAA248111CF008D5DFF /* RandomUserDetailsView.swift in Sources */,
-				7C23D78F2489423500BA6675 /* ImageServiceFetchImage.swift in Sources */,
+				7C23D78F2489423500BA6675 /* ImageServiceNuke.swift in Sources */,
 				7C388D9824811065008D5DFF /* User.swift in Sources */,
 				7C388D9624811065008D5DFF /* ErrorTypes.swift in Sources */,
 				7C388D9924811065008D5DFF /* Name.swift in Sources */,
@@ -448,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -502,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -521,15 +529,18 @@
 				DEVELOPMENT_TEAM = 7KJTVFSV88;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RandomUser_iOS_MVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftui.test.RandomUser-iOS-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -542,15 +553,18 @@
 				DEVELOPMENT_TEAM = 7KJTVFSV88;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RandomUser_iOS_MVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftui.test.RandomUser-iOS-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -578,105 +592,115 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		58B4B466290B1AB400B768C2 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = exactVersion;
+				version = 11.3.1;
+			};
+		};
 		7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dduan/Just";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.8.0;
+				kind = exactVersion;
+				version = 0.8.0;
 			};
 		};
 		7C23D7762489301D00BA6675 /* XCRemoteSwiftPackageReference "DisplayLink" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/timdonnelly/DisplayLink";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
+				kind = exactVersion;
+				version = 0.2.0;
 			};
 		};
 		7C388D9E248110A0008D5DFF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.1;
+				kind = exactVersion;
+				version = 5.6.2;
 			};
 		};
 		7C388DB024811797008D5DFF /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.6;
+				kind = exactVersion;
+				version = 1.0.6;
 			};
 		};
 		7C388DB32481183B008D5DFF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
+				kind = exactVersion;
+				version = 2.2.1;
 			};
 		};
 		7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.0.0;
+				kind = exactVersion;
+				version = 15.0.3;
 			};
 		};
 		7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.14.0;
-			};
-		};
-		7C7658602487127300D781C9 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/FetchImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
+				kind = exactVersion;
+				version = 7.4.1;
 			};
 		};
 		7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.2;
+				kind = exactVersion;
+				version = 10.32.1;
 			};
 		};
 		7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.8;
+				kind = exactVersion;
+				version = 3.5.0;
 			};
 		};
 		7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CSolanaM/SkeletonUI";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.4;
+				kind = exactVersion;
+				version = 1.0.9;
 			};
 		};
 		7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.1;
+				kind = exactVersion;
+				version = 2.8.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		58B4B468290B1BC800B768C2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		58B4B46C290B1DE500B768C2 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58B4B466290B1AB400B768C2 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
 		7C0B50C6248BFCE10072C4B4 /* Just */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */;
@@ -706,16 +730,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
-		};
-		7C76585E2487124F00D781C9 /* KingfisherSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
-		};
-		7C7658612487127300D781C9 /* FetchImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C7658602487127300D781C9 /* XCRemoteSwiftPackageReference "FetchImage" */;
-			productName = FetchImage;
 		};
 		7C765864248712C900D781C9 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;

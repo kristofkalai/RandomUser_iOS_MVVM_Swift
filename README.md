@@ -4,7 +4,7 @@ A small app (written in Swift) to demonstrate the MVVM architecture in the iOS d
 It contains some well-known and well-tested external libraries:
 - networking: [Alamofire](https://github.com/Alamofire/Alamofire), [Moya](https://github.com/Moya/Moya), [Just](https://github.com/dduan/Just)
 - dependency injection: [Swinject](https://github.com/Swinject/Swinject)
-- images: [Kingfisher](https://github.com/onevcat/Kingfisher), [SDWebImage](https://github.com/SDWebImage/SDWebImage), [FetchImage](https://github.com/kean/FetchImage) ([Nuke](https://github.com/kean/Nuke)-based)
+- images: [Kingfisher](https://github.com/onevcat/Kingfisher), [SDWebImage](https://github.com/SDWebImage/SDWebImage), [Nuke](https://github.com/kean/Nuke)
 - persistence: [Realm](https://github.com/realm/realm-cocoa)
 - transitions: [DisplayLink](https://github.com/timdonnelly/DisplayLink), [SwiftUIPullToRefresh](https://github.com/phuhuynh2411/SwiftUI-PullToRefresh), [SkeletonUI](https://github.com/CSolanaM/SkeletonUI)
 - animations: [Lottie](https://github.com/airbnb/lottie-ios)

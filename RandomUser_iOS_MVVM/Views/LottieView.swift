@@ -10,18 +10,17 @@ import SwiftUI
 import Lottie
 
 struct LottieView {
-    
-    internal func makeCoordinator() -> Coordinator {
+    func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
+
     var name: String!
     var loopMode: LottieLoopMode = .loop
-    var animationView = AnimationView()
+    var animationView = LottieAnimationView()
 
-    internal class Coordinator: NSObject {
+    final class Coordinator: NSObject {
         var parent: LottieView
-    
+
         init(_ animationView: LottieView) {
             self.parent = animationView
             super.init()
@@ -30,18 +29,15 @@ struct LottieView {
 }
 
 extension LottieView: UIViewRepresentable {
-    
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
-        
         let view = UIView()
-
         animationView.animation = Animation.named(name)
         animationView.contentMode = .scaleAspectFit
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.loopMode = loopMode
-        
-        view.addSubview(animationView)
 
+        view.addSubview(animationView)
+        
         NSLayoutConstraint.activate([
             animationView.widthAnchor.constraint(equalTo: view.widthAnchor),
             animationView.heightAnchor.constraint(equalTo: view.heightAnchor)

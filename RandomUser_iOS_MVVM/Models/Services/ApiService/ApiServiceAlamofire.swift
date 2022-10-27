@@ -10,8 +10,7 @@ import Alamofire
 import Foundation
 
 /// The `ApiServiceProtocol` implemented by Alamofire.
-class ApiServiceAlamofire: ApiServiceProtocol {
-    
+final class ApiServiceAlamofire: ApiServiceProtocol {
     /// Download random users with the given parameters.
     /// - Parameters:
     ///   - page: the page that wanted to be downloaded.

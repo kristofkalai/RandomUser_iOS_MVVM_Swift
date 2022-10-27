@@ -10,9 +10,9 @@ import Foundation
 
 struct UserResult: Codable {
     let results: [User]
-    
+
     init?(data: Data?) {
-        guard let data = data else { return nil }
+        guard let data else { return nil }
         do {
             self = try JSONDecoder().decode(UserResult.self, from: data)
         } catch {

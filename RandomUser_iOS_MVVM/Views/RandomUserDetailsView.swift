@@ -13,35 +13,33 @@ import SkeletonUI
 
 /// The second screen.
 struct RandomUserDetailsView: View {
-    
     var user: User
+    private let animationDuration = 3.5
     @State private var accessibilitiesString = ""
     @State private var expandedLocationString = ""
-    
-    private let animationDuration = 3.5
-    @State var animationStartDate = Date()
-    @State var url = ""
-    
+    @State private var animationStartDate = Date()
+    @State private var url = ""
+
     var body: some View {
         return VStack() {
-            ImageServiceFetchImage
+            ImageServiceNuke
                 .load(url: url)
-                .skeleton(with: url == "", transition: .opacity, animated: .easeInOut)
+                .skeleton(with: url == .init(), transition: .opacity, animated: .easeInOut)
                 .onAppear {
                     run(2) {
-                        self.url = self.user.picture.large
+                        url = user.picture.large
                     }
-            }
-            .clipShape(Circle())
-            .frame(width: UIScreen.width * 0.8,
-                   height: UIScreen.width * 0.8)
+                }
+                .clipShape(Circle())
+                .frame(width: UIScreen.width * 0.8,
+                       height: UIScreen.width * 0.8)
             Spacer()
-            Text.configure(accessibilitiesString).onFrame { frame in
-                self.onFrameRefresh(text: &self.accessibilitiesString, fullString: self.user.accessibilities)
+            Text.configure(accessibilitiesString).onFrame { _ in
+                onFrameRefresh(text: &accessibilitiesString, fullString: user.accessibilities)
             }
             Spacer()
-            Text.configure(expandedLocationString).onFrame { frame in
-                self.onFrameRefresh(text: &self.expandedLocationString, fullString: self.user.expandedLocation)
+            Text.configure(expandedLocationString).onFrame { _ in
+                onFrameRefresh(text: &expandedLocationString, fullString: user.expandedLocation)
             }
             Spacer()
         }.navigationBarTitle(Text("\(user.fullName) (\(user.gender))"))
@@ -50,18 +48,19 @@ struct RandomUserDetailsView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: UIScreen.width,
                        height: UIScreen.height)
-                .blur(radius: 30.0, opaque: false)).onAppear {
-                    self.animationStartDate = Date()
-        }
+                    .blur(radius: 30.0, opaque: false))
+            .onAppear {
+                animationStartDate = Date()
+            }
     }
-    
+
     private func onFrameRefresh(text: inout String, fullString: String) {
         let now = Date()
-        let elapsedTime = now.timeIntervalSince(self.animationStartDate)
-        if elapsedTime > self.animationDuration {
+        let elapsedTime = now.timeIntervalSince(animationStartDate)
+        if elapsedTime > animationDuration {
             text = fullString
         } else {
-            let percentage = elapsedTime / self.animationDuration
+            let percentage = elapsedTime / animationDuration
             let index = fullString.index(fullString.startIndex, offsetBy: Int(percentage * Double(fullString.count)))
             text = String(fullString[..<index])
         }
@@ -70,7 +69,6 @@ struct RandomUserDetailsView: View {
 
 /// Text extension for the less code duplicate.
 private extension Text {
-    
     static func configure(_ text: String) -> some View {
         Text(text)
             .frame(width: UIScreen.width * 0.8,
