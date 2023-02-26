@@ -16,7 +16,7 @@ struct LottieView {
 
     var name: String!
     var loopMode: LottieLoopMode = .loop
-    var animationView = LottieAnimationView()
+    let animationView = LottieAnimationView()
 
     final class Coordinator: NSObject {
         var parent: LottieView
@@ -31,7 +31,7 @@ struct LottieView {
 extension LottieView: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
         let view = UIView()
-        animationView.animation = Animation.named(name)
+        animationView.animation = LottieAnimation.asset(name)
         animationView.contentMode = .scaleAspectFit
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.loopMode = loopMode

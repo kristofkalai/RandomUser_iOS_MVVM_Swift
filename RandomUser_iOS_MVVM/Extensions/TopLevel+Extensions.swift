@@ -9,7 +9,7 @@
 import Foundation
 
 /// Run something on the main thread asynchronously after a given delay.
-func run(_ delay: Double = .zero, completion: @escaping () -> Void) {
+func run(_ delay: TimeInterval = .zero, completion: @escaping () -> Void) {
     DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
         completion()
     }

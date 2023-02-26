@@ -9,7 +9,7 @@
 // MVVM architecture presents a one-direct data flow, so
 // - View contains ViewModel,
 // - ViewModel contains Model,
-// and no other containment or any other communication are not allowed
+// and other containment or any other communication are not allowed
 
 // MARK: - ViewModel needs to implement this.
 protocol RandomUserViewModelProtocol {

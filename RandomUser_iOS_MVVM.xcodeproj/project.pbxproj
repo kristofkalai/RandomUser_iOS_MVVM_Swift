@@ -597,7 +597,7 @@
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
 				kind = exactVersion;
-				version = 11.3.1;
+				version = 11.6.4;
 			};
 		};
 		7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */ = {
@@ -621,7 +621,7 @@
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				kind = exactVersion;
-				version = 5.6.2;
+				version = 5.6.4;
 			};
 		};
 		7C388DB024811797008D5DFF /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
@@ -637,7 +637,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
 				kind = exactVersion;
-				version = 2.2.1;
+				version = 2.2.2;
 			};
 		};
 		7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */ = {
@@ -653,7 +653,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = exactVersion;
-				version = 7.4.1;
+				version = 7.6.2;
 			};
 		};
 		7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
@@ -661,7 +661,7 @@
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
 				kind = exactVersion;
-				version = 10.32.1;
+				version = 10.36.0;
 			};
 		};
 		7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
@@ -669,7 +669,7 @@
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
 				kind = exactVersion;
-				version = 3.5.0;
+				version = 4.1.3;
 			};
 		};
 		7C76586C2487140800D781C9 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
@@ -685,7 +685,7 @@
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
 				kind = exactVersion;
-				version = 2.8.2;
+				version = 2.8.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
