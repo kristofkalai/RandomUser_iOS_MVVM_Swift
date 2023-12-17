@@ -13,7 +13,7 @@ import SkeletonUI
 
 /// The second screen.
 struct RandomUserDetailsView: View {
-    var user: User
+    let user: User
     private let animationDuration = 3.5
     @State private var accessibilitiesString = ""
     @State private var expandedLocationString = ""
@@ -21,10 +21,10 @@ struct RandomUserDetailsView: View {
     @State private var url = ""
 
     var body: some View {
-        return VStack() {
+        VStack() {
             ImageServiceNuke
                 .load(url: url)
-                .skeleton(with: url == .init(), transition: .opacity, animated: .easeInOut)
+                .skeleton(with: url.isEmpty, transition: (.opacity, .easeInOut))
                 .onAppear {
                     run(2) {
                         url = user.picture.large
@@ -78,8 +78,6 @@ private extension Text {
     }
 }
 
-struct RandomUserDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        RandomUserDetailsView(user: User())
-    }
+#Preview {
+    RandomUserDetailsView(user: User())
 }

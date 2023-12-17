@@ -6,7 +6,6 @@
 //  Copyright © 2020. Kálai Kristóf. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 import Combine
 
@@ -17,7 +16,7 @@ final class RandomUsersViewModel: ObservableObject {
     @Published var showRefreshView = false
 
     /// The so far fetched user data.
-    var users = [User]()
+    private(set) var users = [User]()
 
     /// Returns the so far fetched data + number of users in a page.
     var currentMaxUsers: Int {
@@ -43,17 +42,17 @@ final class RandomUsersViewModel: ObservableObject {
 // MARK: - RandomUserViewModelProtocol part.
 extension RandomUsersViewModel: RandomUserViewModelProtocol {
     /// Fetch some random users.
-    func getRandomUsers(refresh: Bool = false) {
+    func getRandomUsers(refresh: Bool = false, completion: @escaping () -> Void = {}) {
         if refresh {
             users.removeAll()
             seed = UUID().uuidString
         } else {
-            guard !showRefreshView else { return }
+            guard !showRefreshView else { return completion() }
         }
 
         showRefreshView = true
         apiService.getUsers(page: nextPage, results: numberOfUsersPerPage, seed: seed) { [weak self] result in
-            guard let self else { return }
+            guard let self else { return completion() }
             self.showRefreshView = false
             switch result {
             case let .success(users):
@@ -66,6 +65,7 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
             case .failure:
                 break
             }
+            completion()
         }
     }
 }
@@ -73,9 +73,7 @@ extension RandomUsersViewModel: RandomUserViewModelProtocol {
 extension RandomUsersViewModel {
     /// After fetching, the array needs to be cleared from the "nil users".
     private func clearNilsFromArray() {
-        users = users.filter { user -> Bool in
-            user.email != ""
-        }
+        users = users.filter { $0.email != "" }
     }
 
     /// After fetching and storing, the array needs to be filled with "nil users".

@@ -14,11 +14,7 @@ final class PersistenceServiceRealm {
     private let realm: Realm
 
     init(realm: Realm? = nil) {
-        if let realm = realm {
-            self.realm = realm
-        } else {
-            self.realm = try! Realm()
-        }
+        self.realm = realm ?? (try! Realm())
     }
 }
 

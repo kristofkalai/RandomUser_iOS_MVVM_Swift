@@ -14,8 +14,8 @@ struct LottieView {
         Coordinator(self)
     }
 
-    var name: String!
-    var loopMode: LottieLoopMode = .loop
+    let name: String
+    private let loopMode: LottieLoopMode = .loop
     let animationView = LottieAnimationView()
 
     final class Coordinator: NSObject {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,7 +26,6 @@
 		7C23D7982489424A00BA6675 /* ApiServiceAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7942489424900BA6675 /* ApiServiceAlamofire.swift */; };
 		7C23D7992489424A00BA6675 /* ApiServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23D7952489424900BA6675 /* ApiServiceProtocols.swift */; };
 		7C388D7224810FDA008D5DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388D7124810FDA008D5DFF /* AppDelegate.swift */; };
-		7C388D7424810FDA008D5DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388D7324810FDA008D5DFF /* SceneDelegate.swift */; };
 		7C388D7824810FDC008D5DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C388D7724810FDC008D5DFF /* Assets.xcassets */; };
 		7C388D7B24810FDC008D5DFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C388D7A24810FDC008D5DFF /* Preview Assets.xcassets */; };
 		7C388D7E24810FDC008D5DFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C388D7C24810FDC008D5DFF /* LaunchScreen.storyboard */; };
@@ -43,7 +42,6 @@
 		7C388DA6248111B3008D5DFF /* RandomUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DA5248111B3008D5DFF /* RandomUsersView.swift */; };
 		7C388DAA248111CF008D5DFF /* RandomUserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DA9248111CF008D5DFF /* RandomUserDetailsView.swift */; };
 		7C388DAC2481124D008D5DFF /* RandomUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DAB2481124D008D5DFF /* RandomUsersViewModel.swift */; };
-		7C388DB224811797008D5DFF /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7C388DB124811797008D5DFF /* SwiftUIPullToRefresh */; };
 		7C388DB52481183B008D5DFF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C388DB42481183B008D5DFF /* SDWebImageSwiftUI */; };
 		7C388DB8248118C2008D5DFF /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DB7248118C2008D5DFF /* UIScreen+Extensions.swift */; };
 		7C388DBC24816FDA008D5DFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C388DBB24816FDA008D5DFF /* ActivityIndicator.swift */; };
@@ -71,7 +69,6 @@
 		7C23D7952489424900BA6675 /* ApiServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocols.swift; sourceTree = "<group>"; };
 		7C388D6E24810FDA008D5DFF /* RandomUser_iOS_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser_iOS_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C388D7124810FDA008D5DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C388D7324810FDA008D5DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7C388D7724810FDC008D5DFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C388D7A24810FDC008D5DFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C388D7D24810FDC008D5DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 				58B4B46D290B1DE500B768C2 /* NukeUI in Frameworks */,
 				58B4B469290B1BC800B768C2 /* Kingfisher in Frameworks */,
 				7C388DB52481183B008D5DFF /* SDWebImageSwiftUI in Frameworks */,
-				7C388DB224811797008D5DFF /* SwiftUIPullToRefresh in Frameworks */,
 				7C76586B2487136400D781C9 /* Lottie in Frameworks */,
 				7C765865248712C900D781C9 /* RealmSwift in Frameworks */,
 				7C76586E2487140800D781C9 /* SkeletonUI in Frameworks */,
@@ -180,7 +176,6 @@
 				7C388D862481104B008D5DFF /* ViewModels */,
 				7C388D8524811042008D5DFF /* Views */,
 				7C388D7124810FDA008D5DFF /* AppDelegate.swift */,
-				7C388D7324810FDA008D5DFF /* SceneDelegate.swift */,
 				7C388D7724810FDC008D5DFF /* Assets.xcassets */,
 				7C388D7C24810FDC008D5DFF /* LaunchScreen.storyboard */,
 				7C388D7F24810FDC008D5DFF /* Info.plist */,
@@ -278,7 +273,6 @@
 			name = RandomUser_iOS_MVVM;
 			packageProductDependencies = (
 				7C388D9F248110A0008D5DFF /* Alamofire */,
-				7C388DB124811797008D5DFF /* SwiftUIPullToRefresh */,
 				7C388DB42481183B008D5DFF /* SDWebImageSwiftUI */,
 				7C76585B248711DB00D781C9 /* Moya */,
 				7C765864248712C900D781C9 /* RealmSwift */,
@@ -300,8 +294,9 @@
 		7C388D6624810FDA008D5DFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Kálai Kristóf";
 				TargetAttributes = {
 					7C388D6D24810FDA008D5DFF = {
@@ -320,7 +315,6 @@
 			mainGroup = 7C388D6524810FDA008D5DFF;
 			packageReferences = (
 				7C388D9E248110A0008D5DFF /* XCRemoteSwiftPackageReference "Alamofire" */,
-				7C388DB024811797008D5DFF /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
 				7C388DB32481183B008D5DFF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */,
 				7C76585D2487124F00D781C9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
@@ -366,7 +360,6 @@
 				7C23D7972489424A00BA6675 /* ApiServiceMoya.swift in Sources */,
 				7C23D7982489424A00BA6675 /* ApiServiceAlamofire.swift in Sources */,
 				7C388D9524811065008D5DFF /* Picture.swift in Sources */,
-				7C388D7424810FDA008D5DFF /* SceneDelegate.swift in Sources */,
 				7C23D7992489424A00BA6675 /* ApiServiceProtocols.swift in Sources */,
 				7C388D9A24811065008D5DFF /* UserResult.swift in Sources */,
 				7C23D78D2489423500BA6675 /* ImageServiceSDWebImage.swift in Sources */,
@@ -432,6 +425,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -442,6 +436,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -456,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -492,6 +487,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -502,6 +498,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -510,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -529,7 +526,7 @@
 				DEVELOPMENT_TEAM = 7KJTVFSV88;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RandomUser_iOS_MVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,7 +550,7 @@
 				DEVELOPMENT_TEAM = 7KJTVFSV88;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RandomUser_iOS_MVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,7 +594,7 @@
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
 				kind = exactVersion;
-				version = 11.6.4;
+				version = 12.2.0;
 			};
 		};
 		7C0B50C5248BFCE10072C4B4 /* XCRemoteSwiftPackageReference "Just" */ = {
@@ -621,15 +618,7 @@
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				kind = exactVersion;
-				version = 5.6.4;
-			};
-		};
-		7C388DB024811797008D5DFF /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.6;
+				version = 5.8.1;
 			};
 		};
 		7C388DB32481183B008D5DFF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
@@ -637,7 +626,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
 				kind = exactVersion;
-				version = 2.2.2;
+				version = 2.2.6;
 			};
 		};
 		7C76585A248711DB00D781C9 /* XCRemoteSwiftPackageReference "Moya" */ = {
@@ -653,7 +642,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = exactVersion;
-				version = 7.6.2;
+				version = 7.10.1;
 			};
 		};
 		7C765863248712C900D781C9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
@@ -661,7 +650,7 @@
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
 				kind = exactVersion;
-				version = 10.36.0;
+				version = 10.45.0;
 			};
 		};
 		7C7658692487136400D781C9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
@@ -677,7 +666,7 @@
 			repositoryURL = "https://github.com/CSolanaM/SkeletonUI";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.9;
+				version = 2.0.0;
 			};
 		};
 		7CD20048248AC9AE005A4A71 /* XCRemoteSwiftPackageReference "Swinject" */ = {
@@ -685,7 +674,7 @@
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
 				kind = exactVersion;
-				version = 2.8.3;
+				version = 2.8.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -715,11 +704,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C388D9E248110A0008D5DFF /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		7C388DB124811797008D5DFF /* SwiftUIPullToRefresh */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C388DB024811797008D5DFF /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
-			productName = SwiftUIPullToRefresh;
 		};
 		7C388DB42481183B008D5DFF /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -14,7 +14,7 @@
 // MARK: - ViewModel needs to implement this.
 protocol RandomUserViewModelProtocol {
     /// The so far fetched user data.
-    var users: [User] { get set }
+    var users: [User] { get }
 
     /// Whether the refresh spinner should shown or not.
     var showRefreshView: Bool { get set }
@@ -23,5 +23,5 @@ protocol RandomUserViewModelProtocol {
     var currentMaxUsers: Int { get }
 
     /// Fetch some random users.
-    func getRandomUsers(refresh: Bool)
+    func getRandomUsers(refresh: Bool, completion: @escaping () -> Void)
 }

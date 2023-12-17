@@ -15,20 +15,19 @@ struct RandomUsersView: View {
     @ObservedObject private var viewModel = RandomUsersViewModel()
 
     var body: some View {
-        RefreshableNavigationView(title: "Random users",
-                                  showRefreshView: $viewModel.showRefreshView,
-                                  displayMode: .inline,
-                                  action: {
-            viewModel.getRandomUsers(refresh: true)
-        }) {
-            ForEach(viewModel.users, content: buildRow)
+        NavigationView {
+            ScrollView {
+                ForEach(viewModel.users, content: row)
+            }
+            .navigationTitle("Random users")
+            .refreshable { await refresh() }
         }
     }
 }
 
 extension RandomUsersView {
     /// Function to build the rows on the main screen.
-    @ViewBuilder private func buildRow(_ user: User) -> some View {
+    @ViewBuilder private func row(_ user: User) -> some View {
         /// If the current element is not nilUser, then if contains some real data.
         if user.email != .init() {
             NavigationLink(destination: RandomUserDetailsView(user: user), label: {
@@ -40,8 +39,7 @@ extension RandomUsersView {
                                    height: UIScreen.width * 0.15)
                         Text(user.fullName)
                     }
-                    .frame(width: UIScreen.width,
-                           alignment: .leading)
+                    .frame(width: UIScreen.width, alignment: .leading)
                     .background(Color.clear)
                     .padding(.leading, UIScreen.width * 0.15)
                 }
@@ -63,8 +61,16 @@ extension RandomUsersView {
     }
 }
 
-struct RandomUsersView_Previews: PreviewProvider {
-    static var previews: some View {
-        RandomUsersView()
+extension RandomUsersView {
+    private func refresh() async {
+        await withCheckedContinuation { continuation in
+            viewModel.getRandomUsers(refresh: true) {
+                continuation.resume(returning: ())
+            }
+        }
     }
+}
+
+#Preview {
+    RandomUsersView()
 }

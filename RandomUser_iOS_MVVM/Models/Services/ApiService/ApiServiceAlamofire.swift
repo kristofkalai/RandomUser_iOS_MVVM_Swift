@@ -19,21 +19,18 @@ final class ApiServiceAlamofire: ApiServiceProtocol {
     ///   - completion: will be called after the data is ready in an array, or an error occured. Both parameters in the same time couldn't be `nil`.
     func getUsers(page: Int, results: Int, seed: String, completion: @escaping (Result<[User], ErrorTypes>) -> ()) {
         guard let url = ApiServiceContainer.createUrl(page, results, seed) else {
-            completion(.failure(.cannotBeReached))
-            return
+            return completion(.failure(.cannotBeReached))
         }
-        AF.request(url).responseJSON { response in
-            if response.error != nil || response.response?.statusCode == nil {
-                completion(.failure(.wrongRequest))
-            } else if response.response!.statusCode < 400 {
+        AF.request(url).responseDecodable(of: UserResult.self) { response in
+            if let result = response.response, result.statusCode < 400 {
                 guard let userResult = UserResult(data: response.data) else {
-                    completion(.failure(.unexpectedError))
-                    return
+                    return completion(.failure(.unexpectedError))
                 }
-                completion(.success(userResult.results))
-            } else {
-                completion(.failure(.unexpectedError))
+                return completion(.success(userResult.results))
+            } else if response.error != nil {
+                return completion(.failure(.wrongRequest))
             }
+            return completion(.failure(.unexpectedError))
         }
     }
 }

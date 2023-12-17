@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire",
       "state" : {
-        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
-        "version" : "5.6.4"
+        "revision" : "3dc6a42c7727c49bf26508e29b0a0b35f9c7e1ad",
+        "version" : "5.8.1"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",
       "state" : {
-        "revision" : "af4be924ad984cf4d16f4ae4df424e79a443d435",
-        "version" : "7.6.2"
+        "revision" : "add0a87ec4e31e2ca2a0b2085f0559201e4f5918",
+        "version" : "7.10.1"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke.git",
       "state" : {
-        "revision" : "33f7e93be5d4ec027d42af77a8ec4680d1862ad2",
-        "version" : "11.6.4"
+        "revision" : "1694798e876113d44f6ec6ead965d7286695981d",
+        "version" : "12.2.0"
       }
     },
     {
@@ -95,8 +95,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-cocoa",
       "state" : {
-        "revision" : "4d55ba88e78ed427eae439e7c15fac2372f95c64",
-        "version" : "10.36.0"
+        "revision" : "2300f05167898acb20a7f7c1199e8a1cf97d6039",
+        "version" : "10.45.0"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",
       "state" : {
-        "revision" : "a7d486d07b821e28ffd3587e99355a63148cbb43",
-        "version" : "13.4.1"
+        "revision" : "31bcd833c8f67b02f319bede83a05c65868258a9",
+        "version" : "13.24.1"
       }
     },
     {
@@ -131,8 +131,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI",
       "state" : {
-        "revision" : "61fefe9c284fd41ddef77d02749e88f00c305196",
-        "version" : "2.2.2"
+        "revision" : "261b6cec35686d2dc192b809ab50742b4502a73b",
+        "version" : "2.2.6"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/CSolanaM/SkeletonUI",
       "state" : {
-        "revision" : "98225dbb0459477dfeac063e1c7d0750102325d1",
-        "version" : "1.0.9"
+        "revision" : "0fe0817371ad79711af4f5b66b45c86f7eeda4ec",
+        "version" : "2.0.0"
       }
     },
     {
@@ -149,17 +149,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
       "state" : {
-        "revision" : "f29e2014f6230cf7d5138fc899da51c7f513d467",
-        "version" : "1.10.0"
+        "revision" : "59b663f68e69f27a87b45de48cb63264b8194605",
+        "version" : "1.15.1"
       }
     },
     {
-      "identity" : "swiftui-pulltorefresh",
+      "identity" : "swift-syntax",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh",
+      "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
-        "revision" : "20d4652902625a2a3563e57c06368a95be73df18",
-        "version" : "1.0.6"
+        "revision" : "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+        "version" : "509.0.2"
       }
     },
     {
@@ -167,8 +167,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Swinject/Swinject",
       "state" : {
-        "revision" : "8bc503e60965298984fb58cf47b71c541449fe2a",
-        "version" : "2.8.3"
+        "revision" : "463cb2d659c8ae34899d18057ea5b1bb86fc3178",
+        "version" : "2.8.4"
       }
     }
   ],

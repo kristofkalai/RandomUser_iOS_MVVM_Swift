@@ -8,12 +8,15 @@
 
 import UIKit
 import Swinject
+import SwiftUI
 
-@UIApplicationMain
+@main
 final class AppDelegate: UIResponder {
+    var window: UIWindow?
+
     static let container: Container = {
         let container = Container()
-        container.register(ApiServiceProtocol.self) { _ in ApiServiceJust() }
+        container.register(ApiServiceProtocol.self) { _ in ApiServiceAlamofire() }
         return container
     }()
 }
@@ -31,14 +34,18 @@ extension AppDelegate: UIApplicationDelegate {
         UITableView.appearance().backgroundColor = .clear // tableview background
         UITableViewCell.appearance().backgroundColor = .clear
 
+        self.window = getWindow()
+
         return true
     }
+}
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+extension AppDelegate {
+    private func getWindow() -> UIWindow {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = UIHostingController(rootView: RandomUsersView())
+        window.rootViewController?.overrideUserInterfaceStyle = .dark
+        window.makeKeyAndVisible()
+        return window
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) { }
 }

@@ -22,7 +22,7 @@ final class ApiServiceJust: ApiServiceProtocol {
             completion(.failure(.cannotBeReached))
             return
         }
-        Just.get(url) { result in
+        Just.get(url, asyncCompletionHandler: { result in
             run {
                 if result.ok {
                     guard let userResult = UserResult(data: result.content) else {
@@ -34,6 +34,6 @@ final class ApiServiceJust: ApiServiceProtocol {
                     completion(.failure(.unexpectedError))
                 }
             }
-        }
+        })
     }
 }

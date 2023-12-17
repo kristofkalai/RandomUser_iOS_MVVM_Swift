@@ -18,13 +18,13 @@ enum MoyaEnums {
 extension MoyaEnums: TargetType {
     var path: String {
         switch self {
-        case .randomUsers: return ""
+        case .randomUsers: ""
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .randomUsers: return .get
+        case .randomUsers: .get
         }
     }
 
@@ -42,7 +42,7 @@ extension MoyaEnums: TargetType {
     var task: Task {
         switch self {
         case let .randomUsers(page, results, seed):
-            return .requestParameters(parameters: [
+            .requestParameters(parameters: [
                 "inc" : "name,picture,gender,location,email,phone,cell",
                 "page" : String(page),
                 "results" : String(results),

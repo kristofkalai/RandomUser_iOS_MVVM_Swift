@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 struct User: Codable, Identifiable {
-    var id = UUID()
+    let id = UUID()
 
     let name: Name
     let picture: Picture
